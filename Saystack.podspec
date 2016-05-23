@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.0'
   s.source       = { :git => "https://github.com/Legoless/Saystack.git", :tag => s.version }
 
-  s.frameworks   = 'CoreText' 
-  s.source_files = 'Code/Categories/**/*.{h,m}', 'Code/Classes/**/*.{h,m}', 'Code/Haystack.h'
+  #s.frameworks   = 'CoreText' 
+  s.source_files = 'Code/Extensions/**/*.{swift}'
   s.requires_arc = true
 end
