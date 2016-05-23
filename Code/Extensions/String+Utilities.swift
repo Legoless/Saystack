@@ -82,10 +82,4 @@ extension String {
             return nil
         }
     }
-    
-    static func currentApplicationSupportDirectory() -> String {
-        let paths = NSSearchPathForDirectoriesInDomains(.ApplicationSupportDirectory, .UserDomainMask, true)
-        let documentsDirectory = paths[0]
-        return documentsDirectory
-    }
 }
