@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIApplication {
-    class func currentApplicationSupportDirectory() -> String {
+    public class func currentApplicationSupportDirectory() -> String {
         let paths = NSSearchPathForDirectoriesInDomains(.ApplicationSupportDirectory, .UserDomainMask, true)
         let documentsDirectory = paths[0]
         return documentsDirectory

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension String {
-    func stripHTMLtags() -> String {
+    public func stripHTMLtags() -> String {
         let regex:NSRegularExpression = try! NSRegularExpression(pattern: "<.*?>", options: NSRegularExpressionOptions.CaseInsensitive)
         
         let range = NSMakeRange(0, self.characters.count)
@@ -18,7 +18,7 @@ extension String {
         return regex.stringByReplacingMatchesInString(self, options: NSMatchingOptions(rawValue: 0), range:range, withTemplate: "")
     }
     
-    var html2AttributedString: NSAttributedString? {
+    public var html2AttributedString: NSAttributedString? {
         guard let data = dataUsingEncoding(NSUTF8StringEncoding) else {
             return nil
         }
@@ -30,11 +30,11 @@ extension String {
         }
     }
 
-    var html2String: String {
+    public var html2String: String {
         return html2AttributedString?.string ?? ""
     }
 
-    var isValidEmail : Bool {
+    public var isValidEmail : Bool {
         get {
             let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
             let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
@@ -43,7 +43,7 @@ extension String {
         }
     }
     
-    func toStringRange(range: NSRange, string:String ) -> Range<String.Index>? {
+    public func toStringRange(range: NSRange, string:String ) -> Range<String.Index>? {
         guard range.location != NSNotFound else {
             return nil
         }
@@ -55,7 +55,7 @@ extension String {
     // MARK: JSON utilities
     //
     
-    var JSONObject : [String : AnyObject]? {
+    public var JSONObject : [String : AnyObject]? {
         get {
             do {
                 if let data = dataUsingEncoding(NSUTF8StringEncoding) {
@@ -72,7 +72,7 @@ extension String {
         }
     }
     
-    static func fromJSON(object: [String : AnyObject]) -> String? {
+    public static func fromJSON(object: [String : AnyObject]) -> String? {
         do {
             let data = try NSJSONSerialization.dataWithJSONObject(object, options: NSJSONWritingOptions())
             

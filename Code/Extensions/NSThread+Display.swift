@@ -9,7 +9,7 @@
 import Foundation
 
 extension NSThread {
-    var threadId : String {
+    public var threadId : String {
         get {
             var display = self.debugDescription
             display = display.substringFromIndex(display.rangeOfString("number = ")!.endIndex)

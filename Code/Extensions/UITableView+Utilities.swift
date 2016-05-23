@@ -9,7 +9,7 @@
 import UIKit
 
 extension UITableView {
-	func scrollToLastCell(animated: Bool = false) {
+	public func scrollToLastCell(animated: Bool = false) {
 		if numberOfSections > 0 {
 			let numberOfRows = numberOfRowsInSection(numberOfSections - 1)
 			if numberOfRows > 0 {

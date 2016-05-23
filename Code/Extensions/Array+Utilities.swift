@@ -9,7 +9,7 @@
 import Foundation
 
 extension Array where Element : AnyObject {
-    mutating func remove(object: Element) {
+    public mutating func remove(object: Element) {
         if let index = indexOf({ $0 === object }) {
             removeAtIndex(index)
         }
