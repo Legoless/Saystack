@@ -50,6 +50,22 @@ extension String {
         
         return string.startIndex.advancedBy(range.location)..<string.startIndex.advancedBy(range.location + range.length)
     }
+
+    // based on https://gist.github.com/samuel-mellert/20b3c99dec168255a046
+	// which is based on https://gist.github.com/szhernovoy/276e69eb90a0de84dd90
+	// Updated to work on Swift 2.2
+
+	public static func random(length: Int = 20) -> String {
+		let charactersString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+		let charactersArray : [Character] = Array(charactersString.characters)
+
+		var string = ""
+		for _ in 0..<length {
+		    string.append(charactersArray[Int(arc4random()) % charactersArray.count])
+		}
+
+		return string
+	}
     
     //
     // MARK: JSON utilities
