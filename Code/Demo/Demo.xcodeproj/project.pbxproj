@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		384A0F431CFCC308006D7DBF /* UIFont+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A0F421CFCC308006D7DBF /* UIFont+Utilities.swift */; };
+		387766291D24262B005F1165 /* NSDate+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387766281D24262B005F1165 /* NSDate+Utilities.swift */; };
 		3888B6A01CF393070095EBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B69F1CF393070095EBD9 /* AppDelegate.swift */; };
 		3888B6A21CF393070095EBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B6A11CF393070095EBD9 /* ViewController.swift */; };
 		3888B6A51CF393070095EBD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3888B6A31CF393070095EBD9 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		384A0F421CFCC308006D7DBF /* UIFont+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Utilities.swift"; sourceTree = "<group>"; };
+		387766281D24262B005F1165 /* NSDate+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Utilities.swift"; sourceTree = "<group>"; };
 		3888B69C1CF393070095EBD9 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3888B69F1CF393070095EBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3888B6A11CF393070095EBD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				38D892FD1CF393B60074C10F /* Array+Utilities.swift */,
+				387766281D24262B005F1165 /* NSDate+Utilities.swift */,
 				38D893001CF393B60074C10F /* NSThread+Display.swift */,
 				38D893011CF393B60074C10F /* String+Utilities.swift */,
 				38A315F51CF395200062CDCB /* UIApplication+Utilities.swift */,
@@ -244,6 +247,7 @@
 				38D8930A1CF393B60074C10F /* NSThread+Display.swift in Sources */,
 				38D8930E1CF393B60074C10F /* UITableView+Utilities.swift in Sources */,
 				38D893101CF393B60074C10F /* UIViewController+Alert.swift in Sources */,
+				387766291D24262B005F1165 /* NSDate+Utilities.swift in Sources */,
 				384A0F431CFCC308006D7DBF /* UIFont+Utilities.swift in Sources */,
 				38D8930B1CF393B60074C10F /* String+Utilities.swift in Sources */,
 				3888B6A21CF393070095EBD9 /* ViewController.swift in Sources */,
