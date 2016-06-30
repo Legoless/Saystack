@@ -23,6 +23,7 @@
 		38D8930E1CF393B60074C10F /* UITableView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D893041CF393B60074C10F /* UITableView+Utilities.swift */; };
 		38D8930F1CF393B60074C10F /* UIView+Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D893051CF393B60074C10F /* UIView+Parent.swift */; };
 		38D893101CF393B60074C10F /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D893061CF393B60074C10F /* UIViewController+Alert.swift */; };
+		38ED968C1D25410700534BA4 /* Number+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ED968B1D25410700534BA4 /* Number+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		38D893041CF393B60074C10F /* UITableView+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Utilities.swift"; sourceTree = "<group>"; };
 		38D893051CF393B60074C10F /* UIView+Parent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Parent.swift"; sourceTree = "<group>"; };
 		38D893061CF393B60074C10F /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		38ED968B1D25410700534BA4 /* Number+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+Utilities.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				38D892FD1CF393B60074C10F /* Array+Utilities.swift */,
 				387766281D24262B005F1165 /* NSDate+Utilities.swift */,
 				38D893001CF393B60074C10F /* NSThread+Display.swift */,
+				38ED968B1D25410700534BA4 /* Number+Utilities.swift */,
 				38D893011CF393B60074C10F /* String+Utilities.swift */,
 				38A315F51CF395200062CDCB /* UIApplication+Utilities.swift */,
 				384A0F421CFCC308006D7DBF /* UIFont+Utilities.swift */,
@@ -251,6 +254,7 @@
 				384A0F431CFCC308006D7DBF /* UIFont+Utilities.swift in Sources */,
 				38D8930B1CF393B60074C10F /* String+Utilities.swift in Sources */,
 				3888B6A21CF393070095EBD9 /* ViewController.swift in Sources */,
+				38ED968C1D25410700534BA4 /* Number+Utilities.swift in Sources */,
 				3888B6A01CF393070095EBD9 /* AppDelegate.swift in Sources */,
 				38D8930C1CF393B60074C10F /* UIImage+Resize.swift in Sources */,
 				38A315F61CF395200062CDCB /* UIApplication+Utilities.swift in Sources */,
