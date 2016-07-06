@@ -1,6 +1,6 @@
 # Saystack
 
-Saystack is a collection of simple classes and extensions for most common uses in any iOS Swift project. It is a Swift counterpart to [Haystack](https://github.com/legoless/Haystack). Saystack currently supports Swift 2.x. Swift 3.x version will be deployed once apps can be deployed with it.
+Saystack is a collection of simple classes and extensions for most common uses in any iOS Swift project. It is a Swift counterpart to [Haystack](https://github.com/legoless/Haystack). Saystack currently supports Swift 2.x. Swift 3.x version will be released once apps can be deployed to the App Store.
 
 
 Contact
