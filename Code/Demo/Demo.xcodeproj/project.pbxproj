@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		384A0F431CFCC308006D7DBF /* UIFont+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A0F421CFCC308006D7DBF /* UIFont+Utilities.swift */; };
+		384E9D391D32633000B4FD8B /* UIView+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384E9D381D32633000B4FD8B /* UIView+Position.swift */; };
 		386879B41D2A9C2600F24BF0 /* UIStoryboard+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386879B31D2A9C2600F24BF0 /* UIStoryboard+Utilities.swift */; };
 		387766291D24262B005F1165 /* NSDate+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387766281D24262B005F1165 /* NSDate+Utilities.swift */; };
 		3888B6A01CF393070095EBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B69F1CF393070095EBD9 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		384A0F421CFCC308006D7DBF /* UIFont+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Utilities.swift"; sourceTree = "<group>"; };
+		384E9D381D32633000B4FD8B /* UIView+Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Position.swift"; sourceTree = "<group>"; };
 		386879B31D2A9C2600F24BF0 /* UIStoryboard+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Utilities.swift"; sourceTree = "<group>"; };
 		387766281D24262B005F1165 /* NSDate+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Utilities.swift"; sourceTree = "<group>"; };
 		3888B69C1CF393070095EBD9 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 				38D893051CF393B60074C10F /* UIView+Parent.swift */,
 				38D893061CF393B60074C10F /* UIViewController+Alert.swift */,
 				386879B31D2A9C2600F24BF0 /* UIStoryboard+Utilities.swift */,
+				384E9D381D32633000B4FD8B /* UIView+Position.swift */,
 			);
 			name = Extensions;
 			path = ../Extensions;
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38D8930A1CF393B60074C10F /* NSThread+Display.swift in Sources */,
+				384E9D391D32633000B4FD8B /* UIView+Position.swift in Sources */,
 				38D8930E1CF393B60074C10F /* UITableView+Utilities.swift in Sources */,
 				38D893101CF393B60074C10F /* UIViewController+Alert.swift in Sources */,
 				387766291D24262B005F1165 /* NSDate+Utilities.swift in Sources */,
