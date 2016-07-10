@@ -20,6 +20,18 @@ class ViewController: UIViewController {
         print(Float.random())
         print(Float.random())
         print(Float.random())
+        
+        var array = [ 1, 2, 3, 4, 5, 6 ]
+        
+        let shuffled = array.shuffled()
+        
+        print (shuffled)
+        
+        print (array)
+        
+        array.shuffle()
+        
+        print(array)
     }
 }
 

@@ -14,7 +14,9 @@ extension Array where Element : AnyObject {
             removeAtIndex(index)
         }
     }
-    
+}
+
+extension Array {
     public mutating func shuffle() {
         for i in 0 ..< (count - 1) {
             let j = Int(arc4random_uniform(UInt32(count - i))) + i
@@ -22,5 +24,12 @@ extension Array where Element : AnyObject {
                 swap(&self[i], &self[j])
             }
         }
+    }
+    
+    public func shuffled() -> Array {
+        var shuffledArray = self
+        shuffledArray.shuffle()
+        
+        return shuffledArray
     }
 }
