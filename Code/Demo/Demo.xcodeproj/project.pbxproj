@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		384A0F431CFCC308006D7DBF /* UIFont+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384A0F421CFCC308006D7DBF /* UIFont+Utilities.swift */; };
 		384E9D391D32633000B4FD8B /* UIView+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384E9D381D32633000B4FD8B /* UIView+Position.swift */; };
+		384E9D3B1D32649C00B4FD8B /* UIImage+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384E9D3A1D32649C00B4FD8B /* UIImage+Loading.swift */; };
 		386879B41D2A9C2600F24BF0 /* UIStoryboard+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386879B31D2A9C2600F24BF0 /* UIStoryboard+Utilities.swift */; };
 		387766291D24262B005F1165 /* NSDate+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387766281D24262B005F1165 /* NSDate+Utilities.swift */; };
 		3888B6A01CF393070095EBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B69F1CF393070095EBD9 /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		384A0F421CFCC308006D7DBF /* UIFont+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Utilities.swift"; sourceTree = "<group>"; };
 		384E9D381D32633000B4FD8B /* UIView+Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Position.swift"; sourceTree = "<group>"; };
+		384E9D3A1D32649C00B4FD8B /* UIImage+Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Loading.swift"; sourceTree = "<group>"; };
 		386879B31D2A9C2600F24BF0 /* UIStoryboard+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Utilities.swift"; sourceTree = "<group>"; };
 		387766281D24262B005F1165 /* NSDate+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Utilities.swift"; sourceTree = "<group>"; };
 		3888B69C1CF393070095EBD9 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 				38D893011CF393B60074C10F /* String+Utilities.swift */,
 				38A315F51CF395200062CDCB /* UIApplication+Utilities.swift */,
 				384A0F421CFCC308006D7DBF /* UIFont+Utilities.swift */,
+				384E9D3A1D32649C00B4FD8B /* UIImage+Loading.swift */,
 				38D893021CF393B60074C10F /* UIImage+Resize.swift */,
 				38D893041CF393B60074C10F /* UITableView+Utilities.swift */,
 				38D893051CF393B60074C10F /* UIView+Parent.swift */,
@@ -263,6 +266,7 @@
 				3888B6A21CF393070095EBD9 /* ViewController.swift in Sources */,
 				38ED968C1D25410700534BA4 /* Number+Utilities.swift in Sources */,
 				3888B6A01CF393070095EBD9 /* AppDelegate.swift in Sources */,
+				384E9D3B1D32649C00B4FD8B /* UIImage+Loading.swift in Sources */,
 				38D8930C1CF393B60074C10F /* UIImage+Resize.swift in Sources */,
 				38A315F61CF395200062CDCB /* UIApplication+Utilities.swift in Sources */,
 				386879B41D2A9C2600F24BF0 /* UIStoryboard+Utilities.swift in Sources */,
