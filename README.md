@@ -7,6 +7,7 @@ Saystack adds convenience Swift API's to multiple frameworks, including UIKit an
 Few examples:
 
 - UIImage resizing and loading
+- Searching for parent view types in UIView
 - Random number generation
 - Shuffling arrays
 
