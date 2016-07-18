@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Saystack"
-  s.version      = "0.2.4"
+  s.version      = "0.2.5"
   s.summary      = "A collection of simple iOS classes and categories that fit in almost every project."
 
   s.description  = <<-DESC

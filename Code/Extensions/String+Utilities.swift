@@ -58,10 +58,14 @@ extension String {
 	public static func random(length: Int = 20) -> String {
 		let charactersString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 		let charactersArray : [Character] = Array(charactersString.characters)
+        
+        let count = UInt32(charactersArray.count)
 
 		var string = ""
 		for _ in 0..<length {
-		    string.append(charactersArray[Int(arc4random()) % charactersArray.count])
+            let rand = Int(arc4random_uniform(count))
+            
+		    string.append(charactersArray[rand])
 		}
 
 		return string
