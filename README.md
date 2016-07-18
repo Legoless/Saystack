@@ -8,6 +8,17 @@ Few examples:
 
 - UIImage resizing and loading
 - Searching for parent view types in UIView
+
+```swift
+@IBAction func tableCellButtonTap(sender: UIButton) {
+    guard let cell = sender.parentTableViewCell() else { return }
+    
+    let indexPath = self.tableView.indexPathForCell(cell)
+    
+    // Use IndexPath
+}
+```
+
 - Random number generation
 - Shuffling arrays
 
