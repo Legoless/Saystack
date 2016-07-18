@@ -32,6 +32,49 @@ class ViewController: UIViewController {
         array.shuffle()
         
         print(array)
+        
+        let emails = [
+            "email@domain.com",
+            "firstname.lastname@domain.com",
+            "email@subdomain.domain.com",
+            "firstname+lastname@domain.com",
+            "email@123.123.123.123",
+            "email@[123.123.123.123]",
+            "“email”@domain.com",
+            "1234567890@domain.com",
+            "email@domain-one.com",
+            "_______@domain.com",
+            "email@domain.name",
+            "email@domain.co.jp",
+            "firstname-lastname@domain.com",
+            "email@domain.web",
+            
+            "plainaddress",
+            "#@%^%#$@#$@#.com",
+            "@domain.com",
+            "email.domain.com",
+            "email@domain@domain.com",
+            ".email@domain.com",
+            "email.@domain.com",
+            "email@.domain.com",
+            "email..email@domain.com",
+            "あいうえお@domain.com",
+            "email@domain.com",
+            "email@domain",
+            "email@-domain.com",
+            "email@111.222.333.44444",
+            "email@domain..com",
+            "test@test",
+            "test@test.c",
+            "test@test.cc",
+            "test@test.com",
+            "@t.com",
+            "tets@tea."
+        ]
+        
+        for email in emails {
+            print("\(email) is " + (email.isValidEmail ? "valid" : "invalid"))
+        }
     }
 }
 

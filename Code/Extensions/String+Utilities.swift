@@ -35,12 +35,54 @@ extension String {
     }
 
     public var isValidEmail : Bool {
-        get {
-            let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
-            let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-            
-            return emailTest.evaluateWithObject(self)
+        //
+        // First a simple test
+        //
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        
+        var test = emailTest.evaluateWithObject(self)
+        
+        if test == false {
+            return false
         }
+        
+        //
+        // A more complex test
+        //
+        
+        do {
+            let regex = try NSRegularExpression(pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", options: .CaseInsensitive)
+            test = regex.firstMatchInString(self, options: NSMatchingOptions(rawValue: 0), range: NSMakeRange(0, self.characters.count)) != nil
+        }
+        catch {
+            return false
+        }
+        
+        //
+        // Edge cases
+        //
+        
+        if self.containsString("..") {
+            return false
+        }
+        if self.hasPrefix(".") {
+            return false
+        }
+        if self.containsString(".@") {
+            return false
+        }
+        if self.containsString("@.") {
+            return false
+        }
+        if self.containsString("-@") {
+            return false
+        }
+        if self.containsString("@-") {
+            return false
+        }
+        
+        return true
     }
     
     public func toStringRange(range: NSRange, string:String ) -> Range<String.Index>? {
