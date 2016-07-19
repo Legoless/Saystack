@@ -20,7 +20,16 @@ Few examples:
 ```
 
 - Random number generation
-- Shuffling arrays
+- Shuffling array
+
+```swift
+
+var array = [ 1, 2, 3, 4, 5 ]
+array.shuffle()
+
+print(array) // Prints [ 5, 2, 3, 1, 4 ]
+```
+
 
 Contact
 ======
