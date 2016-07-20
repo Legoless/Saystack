@@ -28,6 +28,8 @@ var array = [ 1, 2, 3, 4, 5 ]
 array.shuffle()
 
 print(array) // Prints [ 5, 2, 3, 1, 4 ]
+
+let shuffled = [ 1, 2, 3, 4, 5 ].shuffled()
 ```
 
 
