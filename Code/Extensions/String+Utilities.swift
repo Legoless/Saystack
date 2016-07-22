@@ -7,7 +7,11 @@
 //
 
 import Foundation
-import UIKit
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
 
 extension String {
     public func stripHTMLtags() -> String {
