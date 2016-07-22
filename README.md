@@ -20,7 +20,26 @@ Few examples:
 ```
 
 - Random number generation
+
+```swift
+// Random Integer between 0 and 1000
+let rand1 = Int.random(0, upper: 1000)
+
+// Random Float between 0.00 and 1.00
+let rand2 = Float.random()
+```
+
 - Shuffling arrays
+
+```swift
+var array = [ 1, 2, 3, 4, 5 ]
+array.shuffle()
+
+print(array) // Prints [ 5, 2, 3, 1, 4 ]
+
+let shuffled = [ 1, 2, 3, 4, 5 ].shuffled()
+```
+
 
 Contact
 ======
