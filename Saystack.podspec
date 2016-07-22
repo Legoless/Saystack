@@ -12,10 +12,10 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "Dal Rupnik" => "legoless@gmail.com" }
   s.ios.deployment_target     = '8.0'
+  s.ios.source_files = 'Code/Extensions/**/*.{swift}'
   s.osx.deployment_target     = '10.11'
+  s.osx.source_files = 'Code/Extensions/Core/**/*.{swift}'
   s.source       = { :git => "https://github.com/Legoless/Saystack.git", :tag => s.version }
-
-  #s.frameworks   = 'CoreText' 
-  s.source_files = 'Code/Extensions/**/*.{swift}'
+  
   s.requires_arc = true
 end
