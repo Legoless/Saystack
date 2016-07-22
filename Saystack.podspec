@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Saystack"
-  s.version      = "0.2.8"
+  s.version      = "0.2.9"
   s.summary      = "A collection of simple iOS classes and categories that fit in almost every project."
 
   s.description  = <<-DESC
@@ -11,7 +11,8 @@ Pod::Spec.new do |s|
   s.homepage     = "http://github.com/Legoless/Saystack"
   s.license      = 'MIT'
   s.author       = { "Dal Rupnik" => "legoless@gmail.com" }
-  s.platform     = :ios, '8.0'
+  s.ios.deployment_target     = '8.0'
+  s.osx.deployment_target     = '10.11'
   s.source       = { :git => "https://github.com/Legoless/Saystack.git", :tag => s.version }
 
   #s.frameworks   = 'CoreText' 
