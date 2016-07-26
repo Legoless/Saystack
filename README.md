@@ -6,19 +6,6 @@ Saystack adds convenience Swift API's to multiple frameworks, including UIKit an
 
 Few examples:
 
-- UIImage resizing and loading
-- Searching for parent view types in UIView
-
-```swift
-@IBAction func tableCellButtonTap(sender: UIButton) {
-    guard let cell = sender.parentTableViewCell() else { return }
-    
-    let indexPath = self.tableView.indexPathForCell(cell)
-    
-    // Use IndexPath
-}
-```
-
 - Random number generation
 
 ```swift
@@ -40,6 +27,18 @@ print(array) // Prints [ 5, 2, 3, 1, 4 ]
 let shuffled = [ 1, 2, 3, 4, 5 ].shuffled()
 ```
 
+- UIImage resizing and loading
+- Searching for parent view types in UIView
+
+```swift
+@IBAction func tableCellButtonTap(sender: UIButton) {
+    guard let cell = sender.parentTableViewCell() else { return }
+    
+    let indexPath = self.tableView.indexPathForCell(cell)
+    
+    // Use IndexPath
+}
+```
 
 Contact
 ======
