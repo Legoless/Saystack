@@ -27,7 +27,13 @@ print(array) // Prints [ 5, 2, 3, 1, 4 ]
 let shuffled = [ 1, 2, 3, 4, 5 ].shuffled()
 ```
 
-- UIImage resizing and loading
+- UIImage resizing
+
+```swift
+let image = UIImage(named: "test-image.png")!
+let resized = image.resize (CGSizeMake(100, 100))
+```
+
 - Searching for parent view types in UIView
 
 ```swift
