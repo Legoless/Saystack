@@ -4,7 +4,7 @@ Saystack is a collection of simple classes and extensions for most common uses i
 
 Saystack adds convenience Swift API's to multiple frameworks, including UIKit and Foundation. Both OS X and iOS are supported, but the framework is mainly targeting iOS.
 
-Few examples:
+### Foundation
 
 - Random number generation
 
@@ -26,6 +26,8 @@ print(array) // Prints [ 5, 2, 3, 1, 4 ]
 
 let shuffled = [ 1, 2, 3, 4, 5 ].shuffled()
 ```
+
+### UIKit
 
 - UIImage resizing
 
