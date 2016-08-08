@@ -75,6 +75,8 @@ class ViewController: UIViewController {
         for email in emails {
             print("\(email) is " + (email.isValidEmail ? "valid" : "invalid"))
         }
+        
+        print("I am running in \(UIApplication.environment) environment")
     }
 }
 

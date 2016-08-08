@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3866BC3C1D5948D3005519ED /* UIDevice+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866BC3B1D5948D3005519ED /* UIDevice+Utilities.swift */; };
 		3888B6A01CF393070095EBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B69F1CF393070095EBD9 /* AppDelegate.swift */; };
 		3888B6A21CF393070095EBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B6A11CF393070095EBD9 /* ViewController.swift */; };
 		3888B6A51CF393070095EBD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3888B6A31CF393070095EBD9 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3866BC3B1D5948D3005519ED /* UIDevice+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utilities.swift"; sourceTree = "<group>"; };
 		3888B69C1CF393070095EBD9 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3888B69F1CF393070095EBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3888B6A11CF393070095EBD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				38D00B531D42E4DC00A0DC1D /* UIApplication+Utilities.swift */,
 				38D00B541D42E4DC00A0DC1D /* UIColor+Utilities.swift */,
+				3866BC3B1D5948D3005519ED /* UIDevice+Utilities.swift */,
 				38D00B551D42E4DC00A0DC1D /* UIFont+Utilities.swift */,
 				38D00B561D42E4DC00A0DC1D /* UIImage+Loading.swift */,
 				38D00B571D42E4DC00A0DC1D /* UIImage+Resize.swift */,
@@ -286,6 +289,7 @@
 				38D00B4E1D42E4D400A0DC1D /* NSDate+Utilities.swift in Sources */,
 				38D00B651D42E4DC00A0DC1D /* UIView+Position.swift in Sources */,
 				38D00B611D42E4DC00A0DC1D /* UIImage+Resize.swift in Sources */,
+				3866BC3C1D5948D3005519ED /* UIDevice+Utilities.swift in Sources */,
 				3888B6A21CF393070095EBD9 /* ViewController.swift in Sources */,
 				38D00B661D42E4DC00A0DC1D /* UIViewController+Alert.swift in Sources */,
 				38D00B601D42E4DC00A0DC1D /* UIImage+Loading.swift in Sources */,

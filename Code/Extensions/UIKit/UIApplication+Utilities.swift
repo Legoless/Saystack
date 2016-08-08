@@ -8,6 +8,12 @@
 
 import UIKit
 
+public enum Environment {
+    case Development
+    case TestFlight
+    case AppStore
+}
+
 extension UIApplication {
     public class func currentApplicationSupportDirectory() -> String {
         let paths = NSSearchPathForDirectoriesInDomains(.ApplicationSupportDirectory, .UserDomainMask, true)
@@ -29,5 +35,34 @@ extension UIApplication {
     
     public class var bundleIdentifier : String {
         return NSBundle.mainBundle().bundleIdentifier!
+    }
+    
+    public class var environment : Environment {
+        //
+        // Check for Simulator
+        //
+        
+        if UIDevice.currentDevice().simulator {
+            return .Development
+        }
+        
+        //
+        // Check for development provisioning profile.
+        //
+        
+        if let resource = NSBundle.mainBundle().pathForResource("embedded", ofType: "mobileprovision"), data = NSData(contentsOfFile: resource), profile = String(data: data, encoding: NSASCIIStringEncoding) {
+            let cleared = profile.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).joinWithSeparator("")
+            
+            if cleared.containsString("<key>get-task-allow</key><true/>") {
+                return .Development
+            }
+        }
+        
+        if NSBundle.mainBundle().appStoreReceiptURL?.lastPathComponent == "sandboxReceipt" {
+            return .TestFlight
+        }
+        else {
+            return .AppStore
+        }
     }
 }
