@@ -50,12 +50,8 @@ extension UIApplication {
         // Check for development provisioning profile.
         //
         
-        if let resource = NSBundle.mainBundle().pathForResource("embedded", ofType: "mobileprovision"), data = NSData(contentsOfFile: resource), profile = String(data: data, encoding: NSASCIIStringEncoding) {
-            let cleared = profile.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).joinWithSeparator("")
-            
-            if cleared.containsString("<key>get-task-allow</key><true/>") {
-                return .Development
-            }
+        if let resource = NSBundle.mainBundle().pathForResource("embedded", ofType: "mobileprovision") where NSData(contentsOfFile: resource) != nil {
+            return .Development
         }
         
         if NSBundle.mainBundle().appStoreReceiptURL?.lastPathComponent == "sandboxReceipt" {
