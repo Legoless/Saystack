@@ -16,6 +16,15 @@ extension Array where Element : AnyObject {
     }
 }
 
+extension Array where Element : Hashable {
+    
+    public func unique() -> Array {
+        var seen: [Element : Bool] = [:]
+        
+        return self.filter { seen.updateValue(true, forKey: $0) == nil }
+    }
+}
+
 extension Array {
     public mutating func shuffle() {
         for i in 0 ..< (count - 1) {
@@ -32,4 +41,5 @@ extension Array {
         
         return shuffledArray
     }
+
 }

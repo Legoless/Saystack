@@ -77,6 +77,10 @@ class ViewController: UIViewController {
         }
         
         print("I am running in \(UIApplication.environment) environment")
+        
+        let elements = [ "one", "two", "three", "two", "three", "four" ]
+        
+        print ("Unique elements: \(elements.unique())")
     }
 }
 
