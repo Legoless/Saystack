@@ -29,6 +29,16 @@ let shuffled = [ 1, 2, 3, 4, 5 ].shuffled()
 
 ### UIKit
 
+- Environment detection
+
+```swift
+let environment = UIApplication.environment
+
+if environment == .TestFlight {
+    ...
+}
+```
+
 - UIImage resizing
 
 ```swift
