@@ -16,15 +16,19 @@ let rand1 = Int.random(0, upper: 1000)
 let rand2 = Float.random()
 ```
 
-- Shuffling arrays
+- Array Utilities
 
 ```swift
 var array = [ 1, 2, 3, 4, 5 ]
 array.shuffle()
 
-print(array) // Prints [ 5, 2, 3, 1, 4 ]
-
+// Prints [ 5, 2, 3, 1, 4 ]
+print(array)
 let shuffled = [ 1, 2, 3, 4, 5 ].shuffled()
+
+let uniqueArray = [ 1, 2, 1, 2, 4, 5].unique()
+// Prints [ 1, 2, 4, 5 ]
+print(uniqueArray)
 ```
 
 ### UIKit
