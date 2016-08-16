@@ -11,9 +11,13 @@ Saystack adds many convenience methods to Swift API's. Multiple frameworks are e
 ```swift
 // Random Integer between 0 and 1000
 let rand1 = Int.random(0, upper: 1000)
+// Random Integer between -1000 and 1000
+let rand2 = Int.random(-1000, upper: 1000)
 
-// Random Float between 0.00 and 1.00
+// Single Precision random between 0.00 and 1.00
 let rand2 = Float.random()
+// Double Precision random between 0.00 and 1.00
+let rand3 = Double.random()
 ```
 
 - Array Utilities
