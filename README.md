@@ -26,7 +26,7 @@ array.shuffle()
 print(array)
 let shuffled = [ 1, 2, 3, 4, 5 ].shuffled()
 
-let uniqueArray = [ 1, 2, 1, 2, 4, 5].unique()
+let uniqueArray = [ 1, 2, 1, 2, 4, 5 ].unique()
 // Prints [ 1, 2, 4, 5 ]
 print(uniqueArray)
 ```
