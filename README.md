@@ -12,6 +12,7 @@ Saystack adds many convenience methods to Swift API's. Multiple frameworks are e
 let email1 = "some@example.com".isValidEmail // true
 let email2 = "some@example".isValidEmail // false
 let email3 = "1231241231".isValidEmail // false
+let email3 = "@example.com".isValidEmail // false
 ```
 
 - Random number generation
