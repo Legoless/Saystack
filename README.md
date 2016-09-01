@@ -32,6 +32,9 @@ let rand3 = Double.random()
 - Array Utilities
 
 ```swift
+//
+// Shuffling
+//
 var array = [ 1, 2, 3, 4, 5 ]
 array.shuffle()
 
@@ -39,6 +42,9 @@ array.shuffle()
 print(array)
 let shuffled = [ 1, 2, 3, 4, 5 ].shuffled()
 
+//
+// Distinct
+//
 let uniqueArray = [ 1, 2, 1, 2, 4, 5 ].unique()
 // Prints [ 1, 2, 4, 5 ]
 print(uniqueArray)
