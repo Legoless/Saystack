@@ -6,7 +6,7 @@ Saystack adds many simple convenience methods to Swift API's. Multiple framework
 
 ### Foundation
 
-- Email validation
+- Simple Email validation
 
 ```swift
 let email1 = "some@example.com".isValidEmail // true
