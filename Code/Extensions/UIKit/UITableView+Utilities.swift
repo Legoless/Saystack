@@ -9,11 +9,11 @@
 import UIKit
 
 extension UITableView {
-	public func scrollToLastCell(animated: Bool = false) {
+	public func scrollToLastCell(_ animated: Bool = false) {
 		if numberOfSections > 0 {
-			let numberOfRows = numberOfRowsInSection(numberOfSections - 1)
+			let numberOfRows = self.numberOfRows(inSection: numberOfSections - 1)
 			if numberOfRows > 0 {
-				scrollToRowAtIndexPath(NSIndexPath(forRow: numberOfRows - 1, inSection: numberOfSections - 1), atScrollPosition: .None, animated: animated)
+				scrollToRow(at: IndexPath(row: numberOfRows - 1, section: numberOfSections - 1), at: .none, animated: animated)
 			}
 		}
 	}

@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIView {
-    public func parentViewOfType<T where T : UIView>(type: T.Type) -> T? {
+    public func parentViewOfType<T>(_ type: T.Type) -> T? where T : UIView {
         var view = self.superview
         
         while (view != nil && !(view is T)) {

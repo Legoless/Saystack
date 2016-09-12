@@ -8,12 +8,12 @@
 
 import Foundation
 
-extension NSThread {
+extension Thread {
     public var threadId : String {
         get {
             var display = self.debugDescription
-            display = display.substringFromIndex(display.rangeOfString("number = ")!.endIndex)
-            display = display.substringToIndex(display.rangeOfString(",")!.startIndex)
+            display = display.substring(from: display.range(of: "number = ")!.upperBound)
+            display = display.substring(to: display.range(of: ",")!.lowerBound)
             
             return display
         }

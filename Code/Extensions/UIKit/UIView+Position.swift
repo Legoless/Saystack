@@ -7,9 +7,29 @@
 //
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 extension UIView {
-    public func isAboveView(view: UIView?) -> Bool {
+    public func isAboveView(_ view: UIView?) -> Bool {
         guard let view = view else {
             return false
         }
@@ -25,14 +45,14 @@ extension UIView {
             return false
         }
         
-        let selfIndex = self.superview?.subviews.indexOf(self)
-        let viewIndex = view.superview?.subviews.indexOf(view)
+        let selfIndex = self.superview?.subviews.index(of: self)
+        let viewIndex = view.superview?.subviews.index(of: view)
         
         return selfIndex > viewIndex
     }
     
     
-    func isBelowView(view: UIView?) -> Bool {
+    func isBelowView(_ view: UIView?) -> Bool {
         guard let view = view else {
             return false
         }
@@ -48,8 +68,8 @@ extension UIView {
             return false
         }
         
-        let selfIndex = self.superview?.subviews.indexOf(self)
-        let viewIndex = view.superview?.subviews.indexOf(view)
+        let selfIndex = self.superview?.subviews.index(of: self)
+        let viewIndex = view.superview?.subviews.index(of: view)
         
         return selfIndex < viewIndex
     }

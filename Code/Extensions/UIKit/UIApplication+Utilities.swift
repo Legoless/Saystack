@@ -9,32 +9,32 @@
 import UIKit
 
 public enum Environment {
-    case Development
-    case TestFlight
-    case AppStore
+    case development
+    case testFlight
+    case appStore
 }
 
 extension UIApplication {
     public class func currentApplicationSupportDirectory() -> String {
-        let paths = NSSearchPathForDirectoriesInDomains(.ApplicationSupportDirectory, .UserDomainMask, true)
+        let paths = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)
         let documentsDirectory = paths[0]
         return documentsDirectory
     }
     
     public class var appVersion : String {
-        return NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
+        return Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
     }
     
     public class var name : String {
-        return NSBundle.mainBundle().infoDictionary!["CFBundleDisplayName"] as! String
+        return Bundle.main.infoDictionary!["CFBundleDisplayName"] as! String
     }
     
     public class var build : String {
-        return NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String
+        return Bundle.main.infoDictionary!["CFBundleVersion"] as! String
     }
     
     public class var bundleIdentifier : String {
-        return NSBundle.mainBundle().bundleIdentifier!
+        return Bundle.main.bundleIdentifier!
     }
     
     public class var environment : Environment {
@@ -42,23 +42,23 @@ extension UIApplication {
         // Check for Simulator
         //
         
-        if UIDevice.currentDevice().simulator {
-            return .Development
+        if UIDevice.current.simulator {
+            return .development
         }
         
         //
         // Check for development provisioning profile.
         //
         
-        if let resource = NSBundle.mainBundle().pathForResource("embedded", ofType: "mobileprovision") where NSData(contentsOfFile: resource) != nil {
-            return .Development
+        if let resource = Bundle.main.path(forResource: "embedded", ofType: "mobileprovision") , (try? Data(contentsOf: URL(fileURLWithPath: resource))) != nil {
+            return .development
         }
         
-        if NSBundle.mainBundle().appStoreReceiptURL?.lastPathComponent == "sandboxReceipt" {
-            return .TestFlight
+        if Bundle.main.appStoreReceiptURL?.lastPathComponent == "sandboxReceipt" {
+            return .testFlight
         }
         else {
-            return .AppStore
+            return .appStore
         }
     }
 }

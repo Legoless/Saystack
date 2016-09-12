@@ -24,41 +24,41 @@ extension UIImage {
         forceLoad()
     }
     
-    class func preloadedImage(path: String) -> UIImage? {
+    class func preloadedImage(_ path: String) -> UIImage? {
         
-        guard let image = UIImage(contentsOfFile: path), imageRef = image.CGImage else {
+        guard let image = UIImage(contentsOfFile: path), let imageRef = image.cgImage else {
             return nil
         }
         
-        let rect = CGRectMake(0.0, 0.0, CGFloat(CGImageGetWidth(imageRef)), CGFloat(CGImageGetHeight(imageRef)))
+        let rect = CGRect(x: 0.0, y: 0.0, width: CGFloat(imageRef.width), height: CGFloat(imageRef.height))
         
-        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.PremultipliedFirst.rawValue)
+        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedFirst.rawValue)
         
-        guard let bitmapContext = CGBitmapContextCreate(nil, Int(rect.size.width), Int(rect.size.height), CGImageGetBitsPerComponent(imageRef), CGImageGetBytesPerRow(imageRef), CGImageGetColorSpace(imageRef), bitmapInfo.rawValue | CGBitmapInfo.ByteOrder32Little.rawValue) else {
+        guard let bitmapContext = CGContext(data: nil, width: Int(rect.size.width), height: Int(rect.size.height), bitsPerComponent: imageRef.bitsPerComponent, bytesPerRow: imageRef.bytesPerRow, space: imageRef.colorSpace!, bitmapInfo: bitmapInfo.rawValue | CGBitmapInfo.byteOrder32Little.rawValue) else {
             return nil
         }
         
-        CGContextDrawImage(bitmapContext, rect, imageRef)
+        bitmapContext.draw(imageRef, in: rect)
             
-        let decompressedImageRef = CGBitmapContextCreateImage(bitmapContext)!
-        let decompressedImage: UIImage = UIImage(CGImage: decompressedImageRef)
+        let decompressedImageRef = bitmapContext.makeImage()!
+        let decompressedImage: UIImage = UIImage(cgImage: decompressedImageRef)
 
         return decompressedImage
     }
     
     func forceLoad() {
-        guard let cgImage = CGImage else {
+        guard let cgImage = cgImage else {
             return
         }
         
-        let width = CGImageGetWidth(cgImage)
-        let height = CGImageGetHeight(cgImage)
+        let width = cgImage.width
+        let height = cgImage.height
         
-        if let colorspace: CGColorSpaceRef = CGImageGetColorSpace(cgImage) {
-            let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.NoneSkipLast.rawValue)
+        if let colorspace: CGColorSpace = cgImage.colorSpace {
+            let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.noneSkipLast.rawValue)
             
-            let context = CGBitmapContextCreate(nil, width, height, 8, width * 4, colorspace, bitmapInfo.rawValue)
-            CGContextDrawImage(context, CGRectMake(0, 0, CGFloat(width), CGFloat(height)), cgImage)
+            let context = CGContext(data: nil, width: width, height: height, bitsPerComponent: 8, bytesPerRow: width * 4, space: colorspace, bitmapInfo: bitmapInfo.rawValue)
+            context?.draw(cgImage, in: CGRect(x: 0, y: 0, width: CGFloat(width), height: CGFloat(height)))
         }
     }
 }

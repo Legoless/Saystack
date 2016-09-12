@@ -9,12 +9,12 @@
 import UIKit
 
 extension UIImage {
-    public func resize (size: CGSize) -> UIImage {
+    public func resize (_ size: CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, 1.0)
-        drawInRect(CGRectMake(0, 0, size.width, size.height))
+        draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         let imageResized = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return imageResized
+        return imageResized!
     }
 }
