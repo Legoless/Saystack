@@ -1,0 +1,4 @@
+osx_image: xcode8
+language: swift
+xcode_project: Code/Demo/Demo.xcodeproj
+xcode_scheme: Demo
