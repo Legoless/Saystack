@@ -121,11 +121,11 @@ extension String {
     // MARK: JSON utilities
     //
     
-    public var JSONObject : [String : AnyObject]? {
+    public var JSONObject : [String : Any]? {
         get {
             do {
                 if let data = data(using: String.Encoding.utf8) {
-                    let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()) as? [String: AnyObject]
+                    let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())
                 
                     return json
                 }
@@ -138,7 +138,7 @@ extension String {
         }
     }
     
-    public static func fromJSON(_ object: [String : AnyObject]) -> String? {
+    public static func fromJSON(_ object: [String : Any]) -> String? {
         do {
             let data = try JSONSerialization.data(withJSONObject: object, options: JSONSerialization.WritingOptions())
             
