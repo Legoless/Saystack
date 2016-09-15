@@ -121,7 +121,7 @@ extension String {
     // MARK: JSON utilities
     //
     
-    public var JSONObject : [String : Any]? {
+    public var JSONObject : Any? {
         get {
             do {
                 if let data = data(using: String.Encoding.utf8) {
@@ -138,7 +138,7 @@ extension String {
         }
     }
     
-    public static func fromJSON(_ object: [String : Any]) -> String? {
+    public static func fromJSON(_ object: Any) -> String? {
         do {
             let data = try JSONSerialization.data(withJSONObject: object, options: JSONSerialization.WritingOptions())
             
