@@ -25,6 +25,8 @@ public enum FontWeight : String {
     case medium             = "Medium"
     case mediumItalic       = "MediumItalic"
     case regular            = "Regular"
+    case semiBold           = "SemiBold"
+    case semiBoldItalic     = "SemiBoldItalic"
     case thin               = "Thin"
     case thinItalic         = "ThinItalic"
     case ultraLight         = "UltraLight"
