@@ -8,7 +8,7 @@
 [![Pod Platform](http://img.shields.io/cocoapods/p/Saystack.svg?style=flat)](http://cocoadocs.org/docsets/Saystack/)
 [![Pod License](http://img.shields.io/cocoapods/l/Saystack.svg?style=flat)](http://opensource.org/licenses/MIT)
 
-Saystack is a collection of simple classes and extensions for most common uses in any iOS Swift project. It is a Swift counterpart to [Haystack](https://github.com/legoless/Haystack). Saystack currently supports Swift 2.x. Swift 3.x version will be released once apps can be deployed to the App Store with Swift 3.
+Saystack is a collection of simple classes and extensions for most common uses in any iOS Swift project. It is a Swift counterpart to [Haystack](https://github.com/legoless/Haystack).
 
 Saystack adds many simple convenience methods to Swift API's. Multiple iOS and macOS frameworks are extended, including UIKit and Foundation. Both macOS and iOS are supported, but the framework is mainly targeting iOS, as macOS does not support UIKit.
 
