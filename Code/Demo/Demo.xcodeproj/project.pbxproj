@@ -14,7 +14,7 @@
 		38563B521DE5B626002EF73F /* Saystack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38563B3C1DE5B626002EF73F /* Saystack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38563B5A1DE5B63C002EF73F /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B461D42E4D400A0DC1D /* Array+Utilities.swift */; };
 		38563B5B1DE5B63F002EF73F /* NSAttributedString+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B471D42E4D400A0DC1D /* NSAttributedString+Utilities.swift */; };
-		38563B5C1DE5B642002EF73F /* NSDate+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B481D42E4D400A0DC1D /* NSDate+Utilities.swift */; };
+		38563B5C1DE5B642002EF73F /* Date+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B481D42E4D400A0DC1D /* Date+Utilities.swift */; };
 		38563B5D1DE5B647002EF73F /* NSThread+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B491D42E4D400A0DC1D /* NSThread+Display.swift */; };
 		38563B5E1DE5B64A002EF73F /* Number+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B4A1D42E4D400A0DC1D /* Number+Utilities.swift */; };
 		38563B5F1DE5B64C002EF73F /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B4B1D42E4D400A0DC1D /* String+Utilities.swift */; };
@@ -33,7 +33,7 @@
 		38563B751DE5B68F002EF73F /* SaystackMac.h in Headers */ = {isa = PBXBuildFile; fileRef = 38563B731DE5B68F002EF73F /* SaystackMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38563B791DE5B693002EF73F /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B461D42E4D400A0DC1D /* Array+Utilities.swift */; };
 		38563B7A1DE5B698002EF73F /* NSAttributedString+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B471D42E4D400A0DC1D /* NSAttributedString+Utilities.swift */; };
-		38563B7B1DE5B69A002EF73F /* NSDate+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B481D42E4D400A0DC1D /* NSDate+Utilities.swift */; };
+		38563B7B1DE5B69A002EF73F /* Date+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B481D42E4D400A0DC1D /* Date+Utilities.swift */; };
 		38563B7C1DE5B69D002EF73F /* NSThread+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B491D42E4D400A0DC1D /* NSThread+Display.swift */; };
 		38563B7D1DE5B69F002EF73F /* Number+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B4A1D42E4D400A0DC1D /* Number+Utilities.swift */; };
 		38563B7E1DE5B6A1002EF73F /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B4B1D42E4D400A0DC1D /* String+Utilities.swift */; };
@@ -114,7 +114,7 @@
 		388C8F0E1DB5063100CCC3F1 /* UINavigationController+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Utilities.swift"; sourceTree = "<group>"; };
 		38D00B461D42E4D400A0DC1D /* Array+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Utilities.swift"; sourceTree = "<group>"; };
 		38D00B471D42E4D400A0DC1D /* NSAttributedString+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Utilities.swift"; sourceTree = "<group>"; };
-		38D00B481D42E4D400A0DC1D /* NSDate+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Utilities.swift"; sourceTree = "<group>"; };
+		38D00B481D42E4D400A0DC1D /* Date+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Utilities.swift"; sourceTree = "<group>"; };
 		38D00B491D42E4D400A0DC1D /* NSThread+Display.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSThread+Display.swift"; sourceTree = "<group>"; };
 		38D00B4A1D42E4D400A0DC1D /* Number+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+Utilities.swift"; sourceTree = "<group>"; };
 		38D00B4B1D42E4D400A0DC1D /* String+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
@@ -257,8 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				38D00B461D42E4D400A0DC1D /* Array+Utilities.swift */,
+				38D00B481D42E4D400A0DC1D /* Date+Utilities.swift */,
 				38D00B471D42E4D400A0DC1D /* NSAttributedString+Utilities.swift */,
-				38D00B481D42E4D400A0DC1D /* NSDate+Utilities.swift */,
 				38D00B491D42E4D400A0DC1D /* NSThread+Display.swift */,
 				38D00B4A1D42E4D400A0DC1D /* Number+Utilities.swift */,
 				38D00B4B1D42E4D400A0DC1D /* String+Utilities.swift */,
@@ -517,7 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38563B641DE5B65C002EF73F /* UIImage+Loading.swift in Sources */,
-				38563B5C1DE5B642002EF73F /* NSDate+Utilities.swift in Sources */,
+				38563B5C1DE5B642002EF73F /* Date+Utilities.swift in Sources */,
 				38563B681DE5B667002EF73F /* UITableView+Utilities.swift in Sources */,
 				38563B621DE5B656002EF73F /* UIDevice+Utilities.swift in Sources */,
 				38563B5F1DE5B64C002EF73F /* String+Utilities.swift in Sources */,
@@ -549,7 +549,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38563B7B1DE5B69A002EF73F /* NSDate+Utilities.swift in Sources */,
+				38563B7B1DE5B69A002EF73F /* Date+Utilities.swift in Sources */,
 				38563B7E1DE5B6A1002EF73F /* String+Utilities.swift in Sources */,
 				38563B7A1DE5B698002EF73F /* NSAttributedString+Utilities.swift in Sources */,
 				38563B7D1DE5B69F002EF73F /* Number+Utilities.swift in Sources */,
