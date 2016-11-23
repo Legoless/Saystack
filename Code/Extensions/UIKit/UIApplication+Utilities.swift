@@ -42,7 +42,7 @@ extension UIApplication {
         // Check for Simulator
         //
         
-        if UIDevice.current.simulator {
+        if UIDevice.current.isSimulator {
             return .development
         }
         

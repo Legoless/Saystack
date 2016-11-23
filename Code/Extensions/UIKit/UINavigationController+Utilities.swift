@@ -9,7 +9,7 @@
 import UIKit
 
 extension UINavigationController {
-    public func pushViewControllerStack(_ viewControllers: [UIViewController], animated: Bool) {
+    public func pushViewControllerStack(viewControllers: [UIViewController], animated: Bool) {
         var currentViewControllers = self.viewControllers
         currentViewControllers.append(contentsOf: viewControllers)
         

@@ -24,7 +24,7 @@ extension UIImage {
         forceLoad()
     }
     
-    class func preloadedImage(_ path: String) -> UIImage? {
+    class func preloadedImage(path: String) -> UIImage? {
         
         guard let image = UIImage(contentsOfFile: path), let imageRef = image.cgImage else {
             return nil

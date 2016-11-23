@@ -10,20 +10,20 @@ import Foundation
 
 //
 // Parts of code taken from post at:
-//  http://stackoverflow.com/questions/24007129/how-does-one-generate-a-random-number-in-apples-swift-language
+// http://stackoverflow.com/questions/24007129/how-does-one-generate-a-random-number-in-apples-swift-language
 //
 
-private func arc4random <T: ExpressibleByIntegerLiteral> (_ type: T.Type) -> T {
+private func arc4random <T: ExpressibleByIntegerLiteral> (type: T.Type) -> T {
     var r: T = 0
     arc4random_buf(&r, MemoryLayout<T>.size)
     return r
 }
 
 public extension UInt64 {
-    public static func random(_ lower: UInt64 = min, upper: UInt64 = max) -> UInt64 {
+    public static func random(from: UInt64 = min, to: UInt64 = max) -> UInt64 {
         var m: UInt64
-        let u = upper - lower
-        var r = arc4random(UInt64.self)
+        let u = to - from
+        var r = arc4random(type: UInt64.self)
         
         if u > UInt64(Int64.max) {
             m = 1 + ~u
@@ -32,56 +32,56 @@ public extension UInt64 {
         }
         
         while r < m {
-            r = arc4random(UInt64.self)
+            r = arc4random(type: UInt64.self)
         }
         
-        return (r % u) + lower
+        return (r % u) + from
     }
 }
 
 public extension Int64 {
-    public static func random(_ lower: Int64 = min, upper: Int64 = max) -> Int64 {
-        let (s, overflow) = Int64.subtractWithOverflow(upper, lower)
+    public static func random(from: Int64 = min, to: Int64 = max) -> Int64 {
+        let (s, overflow) = Int64.subtractWithOverflow(to, from)
         let u = overflow ? UInt64.max - UInt64(~s) : UInt64(s)
-        let r = UInt64.random(upper: u)
+        let r = UInt64.random(to: u)
         
         if r > UInt64(Int64.max)  {
-            return Int64(r - (UInt64(~lower) + 1))
+            return Int64(r - (UInt64(~from) + 1))
         } else {
-            return Int64(r) + lower
+            return Int64(r) + from
         }
     }
 }
 
 public extension UInt32 {
-    static func random(_ lower: UInt32 = min, upper: UInt32 = max) -> UInt32 {
-        return arc4random_uniform(upper - lower) + lower
+    static func random(from: UInt32 = min, to: UInt32 = max) -> UInt32 {
+        return arc4random_uniform(to - from) + from
     }
 }
 
 public extension Int32 {
-    static func random(_ lower: Int32 = min, upper: Int32 = max) -> Int32 {
-        let r = arc4random_uniform(UInt32(Int64(upper) - Int64(lower)))
-        return Int32(Int64(r) + Int64(lower))
+    static func random(from: Int32 = min, to: Int32 = max) -> Int32 {
+        let r = arc4random_uniform(UInt32(Int64(to) - Int64(from)))
+        return Int32(Int64(r) + Int64(from))
     }
 }
 
 public extension UInt {
-    public static func random(_ lower: UInt = min, upper: UInt = max) -> UInt {
+    public static func random(from: UInt = min, to: UInt = max) -> UInt {
         switch (__WORDSIZE / CHAR_BIT) {
-        case 4: return UInt(UInt32.random(UInt32(lower), upper: UInt32(upper)))
-        case 8: return UInt(UInt64.random(UInt64(lower), upper: UInt64(upper)))
-        default: return lower
+        case 4: return UInt(UInt32.random(from: UInt32(from), to: UInt32(to)))
+        case 8: return UInt(UInt64.random(from: UInt64(from), to: UInt64(to)))
+        default: return from
         }
     }
 }
 
 public extension Int {
-    public static func random(_ lower: Int = min, upper: Int = max) -> Int {
+    public static func random(from: Int = min, to: Int = max) -> Int {
         switch (__WORDSIZE / CHAR_BIT) {
-        case 4: return Int(Int32.random(Int32(lower), upper: Int32(upper)))
-        case 8: return Int(Int64.random(Int64(lower), upper: Int64(upper)))
-        default: return lower
+        case 4: return Int(Int32.random(from: Int32(from), to: Int32(to)))
+        case 8: return Int(Int64.random(from: Int64(from), to: Int64(to)))
+        default: return from
         }
     }
 }

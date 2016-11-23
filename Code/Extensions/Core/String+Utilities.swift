@@ -47,7 +47,7 @@ extension String {
         
         var test = emailTest.evaluate(with: self)
         
-        if test == false {
+        if !test {
             return false
         }
         
@@ -101,7 +101,7 @@ extension String {
 	// which is based on https://gist.github.com/szhernovoy/276e69eb90a0de84dd90
 	// Updated to work on Swift 2.2
 
-	public static func random(_ length: Int = 20) -> String {
+	public static func random(length: Int = 20) -> String {
 		let charactersString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 		let charactersArray : [Character] = Array(charactersString.characters)
         
@@ -138,7 +138,7 @@ extension String {
         }
     }
     
-    public static func fromJSON(_ object: Any) -> String? {
+    public static func fromJSON(object: Any) -> String? {
         do {
             let data = try JSONSerialization.data(withJSONObject: object, options: JSONSerialization.WritingOptions())
             

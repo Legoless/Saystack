@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIView {
-    public func parentViewOfType<T>(_ type: T.Type) -> T? where T : UIView {
+    public func parentViewOfType<T>(type: T.Type) -> T? where T : UIView {
         var view = self.superview
         
         while (view != nil && !(view is T)) {
@@ -24,10 +24,10 @@ extension UIView {
     }
     
     public func parentTableViewCell () -> UITableViewCell? {
-        return parentViewOfType(UITableViewCell.self)
+        return parentViewOfType(type: UITableViewCell.self)
     }
     
     public func parentCollectionViewCell () -> UICollectionViewCell? {
-        return parentViewOfType(UICollectionViewCell.self)
+        return parentViewOfType(type: UICollectionViewCell.self)
     }
 }
