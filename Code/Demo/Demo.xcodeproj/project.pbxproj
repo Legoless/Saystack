@@ -7,33 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3866BC3C1D5948D3005519ED /* UIDevice+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866BC3B1D5948D3005519ED /* UIDevice+Utilities.swift */; };
+		38563B451DE5B626002EF73F /* Saystack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38563B3C1DE5B626002EF73F /* Saystack.framework */; };
+		38563B4C1DE5B626002EF73F /* SaystackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38563B4B1DE5B626002EF73F /* SaystackTests.swift */; };
+		38563B4E1DE5B626002EF73F /* Saystack.h in Headers */ = {isa = PBXBuildFile; fileRef = 38563B3E1DE5B626002EF73F /* Saystack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38563B511DE5B626002EF73F /* Saystack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38563B3C1DE5B626002EF73F /* Saystack.framework */; };
+		38563B521DE5B626002EF73F /* Saystack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38563B3C1DE5B626002EF73F /* Saystack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		38563B5A1DE5B63C002EF73F /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B461D42E4D400A0DC1D /* Array+Utilities.swift */; };
+		38563B5B1DE5B63F002EF73F /* NSAttributedString+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B471D42E4D400A0DC1D /* NSAttributedString+Utilities.swift */; };
+		38563B5C1DE5B642002EF73F /* NSDate+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B481D42E4D400A0DC1D /* NSDate+Utilities.swift */; };
+		38563B5D1DE5B647002EF73F /* NSThread+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B491D42E4D400A0DC1D /* NSThread+Display.swift */; };
+		38563B5E1DE5B64A002EF73F /* Number+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B4A1D42E4D400A0DC1D /* Number+Utilities.swift */; };
+		38563B5F1DE5B64C002EF73F /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B4B1D42E4D400A0DC1D /* String+Utilities.swift */; };
+		38563B601DE5B651002EF73F /* UIApplication+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B531D42E4DC00A0DC1D /* UIApplication+Utilities.swift */; };
+		38563B611DE5B654002EF73F /* UIColor+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B541D42E4DC00A0DC1D /* UIColor+Utilities.swift */; };
+		38563B621DE5B656002EF73F /* UIDevice+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866BC3B1D5948D3005519ED /* UIDevice+Utilities.swift */; };
+		38563B631DE5B659002EF73F /* UIFont+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B551D42E4DC00A0DC1D /* UIFont+Utilities.swift */; };
+		38563B641DE5B65C002EF73F /* UIImage+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B561D42E4DC00A0DC1D /* UIImage+Loading.swift */; };
+		38563B651DE5B65F002EF73F /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B571D42E4DC00A0DC1D /* UIImage+Resize.swift */; };
+		38563B661DE5B662002EF73F /* UINavigationController+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388C8F0E1DB5063100CCC3F1 /* UINavigationController+Utilities.swift */; };
+		38563B671DE5B664002EF73F /* UIStoryboard+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B581D42E4DC00A0DC1D /* UIStoryboard+Utilities.swift */; };
+		38563B681DE5B667002EF73F /* UITableView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B591D42E4DC00A0DC1D /* UITableView+Utilities.swift */; };
+		38563B691DE5B66A002EF73F /* UIView+Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B5A1D42E4DC00A0DC1D /* UIView+Parent.swift */; };
+		38563B6A1DE5B66C002EF73F /* UIView+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B5B1D42E4DC00A0DC1D /* UIView+Position.swift */; };
+		38563B6B1DE5B670002EF73F /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B5C1D42E4DC00A0DC1D /* UIViewController+Alert.swift */; };
+		38563B751DE5B68F002EF73F /* SaystackMac.h in Headers */ = {isa = PBXBuildFile; fileRef = 38563B731DE5B68F002EF73F /* SaystackMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38563B791DE5B693002EF73F /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B461D42E4D400A0DC1D /* Array+Utilities.swift */; };
+		38563B7A1DE5B698002EF73F /* NSAttributedString+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B471D42E4D400A0DC1D /* NSAttributedString+Utilities.swift */; };
+		38563B7B1DE5B69A002EF73F /* NSDate+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B481D42E4D400A0DC1D /* NSDate+Utilities.swift */; };
+		38563B7C1DE5B69D002EF73F /* NSThread+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B491D42E4D400A0DC1D /* NSThread+Display.swift */; };
+		38563B7D1DE5B69F002EF73F /* Number+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B4A1D42E4D400A0DC1D /* Number+Utilities.swift */; };
+		38563B7E1DE5B6A1002EF73F /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B4B1D42E4D400A0DC1D /* String+Utilities.swift */; };
 		3888B6A01CF393070095EBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B69F1CF393070095EBD9 /* AppDelegate.swift */; };
 		3888B6A21CF393070095EBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B6A11CF393070095EBD9 /* ViewController.swift */; };
 		3888B6A51CF393070095EBD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3888B6A31CF393070095EBD9 /* Main.storyboard */; };
 		3888B6A71CF393070095EBD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3888B6A61CF393070095EBD9 /* Assets.xcassets */; };
 		3888B6AA1CF393070095EBD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3888B6A81CF393070095EBD9 /* LaunchScreen.storyboard */; };
 		3888B6B51CF393070095EBD9 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B6B41CF393070095EBD9 /* DemoTests.swift */; };
-		388C8F0F1DB5063100CCC3F1 /* UINavigationController+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388C8F0E1DB5063100CCC3F1 /* UINavigationController+Utilities.swift */; };
-		38D00B4C1D42E4D400A0DC1D /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B461D42E4D400A0DC1D /* Array+Utilities.swift */; };
-		38D00B4D1D42E4D400A0DC1D /* NSAttributedString+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B471D42E4D400A0DC1D /* NSAttributedString+Utilities.swift */; };
-		38D00B4E1D42E4D400A0DC1D /* NSDate+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B481D42E4D400A0DC1D /* NSDate+Utilities.swift */; };
-		38D00B4F1D42E4D400A0DC1D /* NSThread+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B491D42E4D400A0DC1D /* NSThread+Display.swift */; };
-		38D00B501D42E4D400A0DC1D /* Number+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B4A1D42E4D400A0DC1D /* Number+Utilities.swift */; };
-		38D00B511D42E4D400A0DC1D /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B4B1D42E4D400A0DC1D /* String+Utilities.swift */; };
-		38D00B5D1D42E4DC00A0DC1D /* UIApplication+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B531D42E4DC00A0DC1D /* UIApplication+Utilities.swift */; };
-		38D00B5E1D42E4DC00A0DC1D /* UIColor+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B541D42E4DC00A0DC1D /* UIColor+Utilities.swift */; };
-		38D00B5F1D42E4DC00A0DC1D /* UIFont+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B551D42E4DC00A0DC1D /* UIFont+Utilities.swift */; };
-		38D00B601D42E4DC00A0DC1D /* UIImage+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B561D42E4DC00A0DC1D /* UIImage+Loading.swift */; };
-		38D00B611D42E4DC00A0DC1D /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B571D42E4DC00A0DC1D /* UIImage+Resize.swift */; };
-		38D00B621D42E4DC00A0DC1D /* UIStoryboard+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B581D42E4DC00A0DC1D /* UIStoryboard+Utilities.swift */; };
-		38D00B631D42E4DC00A0DC1D /* UITableView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B591D42E4DC00A0DC1D /* UITableView+Utilities.swift */; };
-		38D00B641D42E4DC00A0DC1D /* UIView+Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B5A1D42E4DC00A0DC1D /* UIView+Parent.swift */; };
-		38D00B651D42E4DC00A0DC1D /* UIView+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B5B1D42E4DC00A0DC1D /* UIView+Position.swift */; };
-		38D00B661D42E4DC00A0DC1D /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B5C1D42E4DC00A0DC1D /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		38563B461DE5B626002EF73F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3888B6941CF393070095EBD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38563B3B1DE5B626002EF73F;
+			remoteInfo = Saystack;
+		};
+		38563B481DE5B626002EF73F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3888B6941CF393070095EBD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3888B69B1CF393070095EBD9;
+			remoteInfo = Demo;
+		};
+		38563B4F1DE5B626002EF73F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3888B6941CF393070095EBD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38563B3B1DE5B626002EF73F;
+			remoteInfo = Saystack;
+		};
 		3888B6B11CF393070095EBD9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3888B6941CF393070095EBD9 /* Project object */;
@@ -43,7 +76,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		38563B581DE5B626002EF73F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				38563B521DE5B626002EF73F /* Saystack.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		38563B3C1DE5B626002EF73F /* Saystack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Saystack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38563B3E1DE5B626002EF73F /* Saystack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Saystack.h; sourceTree = "<group>"; };
+		38563B3F1DE5B626002EF73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38563B441DE5B626002EF73F /* SaystackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaystackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38563B4B1DE5B626002EF73F /* SaystackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaystackTests.swift; sourceTree = "<group>"; };
+		38563B4D1DE5B626002EF73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38563B711DE5B68F002EF73F /* SaystackMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SaystackMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38563B731DE5B68F002EF73F /* SaystackMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaystackMac.h; sourceTree = "<group>"; };
+		38563B741DE5B68F002EF73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3866BC3B1D5948D3005519ED /* UIDevice+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utilities.swift"; sourceTree = "<group>"; };
 		3888B69C1CF393070095EBD9 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3888B69F1CF393070095EBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,10 +131,33 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		38563B381DE5B626002EF73F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38563B411DE5B626002EF73F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38563B451DE5B626002EF73F /* Saystack.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38563B6D1DE5B68F002EF73F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3888B6991CF393070095EBD9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38563B511DE5B626002EF73F /* Saystack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,12 +171,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38563B3D1DE5B626002EF73F /* Saystack */ = {
+			isa = PBXGroup;
+			children = (
+				38563B3E1DE5B626002EF73F /* Saystack.h */,
+				38563B3F1DE5B626002EF73F /* Info.plist */,
+			);
+			path = Saystack;
+			sourceTree = "<group>";
+		};
+		38563B4A1DE5B626002EF73F /* SaystackTests */ = {
+			isa = PBXGroup;
+			children = (
+				38563B4B1DE5B626002EF73F /* SaystackTests.swift */,
+				38563B4D1DE5B626002EF73F /* Info.plist */,
+			);
+			path = SaystackTests;
+			sourceTree = "<group>";
+		};
+		38563B721DE5B68F002EF73F /* SaystackMac */ = {
+			isa = PBXGroup;
+			children = (
+				38563B731DE5B68F002EF73F /* SaystackMac.h */,
+				38563B741DE5B68F002EF73F /* Info.plist */,
+			);
+			path = SaystackMac;
+			sourceTree = "<group>";
+		};
 		3888B6931CF393070095EBD9 = {
 			isa = PBXGroup;
 			children = (
 				3888B6BF1CF3930E0095EBD9 /* Saystack */,
 				3888B69E1CF393070095EBD9 /* Demo */,
 				3888B6B31CF393070095EBD9 /* DemoTests */,
+				38563B3D1DE5B626002EF73F /* Saystack */,
+				38563B4A1DE5B626002EF73F /* SaystackTests */,
+				38563B721DE5B68F002EF73F /* SaystackMac */,
 				3888B69D1CF393070095EBD9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,6 +216,9 @@
 			children = (
 				3888B69C1CF393070095EBD9 /* Demo.app */,
 				3888B6B01CF393070095EBD9 /* DemoTests.xctest */,
+				38563B3C1DE5B626002EF73F /* Saystack.framework */,
+				38563B441DE5B626002EF73F /* SaystackTests.xctest */,
+				38563B711DE5B68F002EF73F /* SaystackMac.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,7 +297,81 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		38563B391DE5B626002EF73F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38563B4E1DE5B626002EF73F /* Saystack.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38563B6E1DE5B68F002EF73F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38563B751DE5B68F002EF73F /* SaystackMac.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		38563B3B1DE5B626002EF73F /* Saystack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38563B571DE5B626002EF73F /* Build configuration list for PBXNativeTarget "Saystack" */;
+			buildPhases = (
+				38563B371DE5B626002EF73F /* Sources */,
+				38563B381DE5B626002EF73F /* Frameworks */,
+				38563B391DE5B626002EF73F /* Headers */,
+				38563B3A1DE5B626002EF73F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Saystack;
+			productName = Saystack;
+			productReference = 38563B3C1DE5B626002EF73F /* Saystack.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		38563B431DE5B626002EF73F /* SaystackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38563B591DE5B626002EF73F /* Build configuration list for PBXNativeTarget "SaystackTests" */;
+			buildPhases = (
+				38563B401DE5B626002EF73F /* Sources */,
+				38563B411DE5B626002EF73F /* Frameworks */,
+				38563B421DE5B626002EF73F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38563B471DE5B626002EF73F /* PBXTargetDependency */,
+				38563B491DE5B626002EF73F /* PBXTargetDependency */,
+			);
+			name = SaystackTests;
+			productName = SaystackTests;
+			productReference = 38563B441DE5B626002EF73F /* SaystackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		38563B701DE5B68F002EF73F /* SaystackMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38563B761DE5B68F002EF73F /* Build configuration list for PBXNativeTarget "SaystackMac" */;
+			buildPhases = (
+				38563B6C1DE5B68F002EF73F /* Sources */,
+				38563B6D1DE5B68F002EF73F /* Frameworks */,
+				38563B6E1DE5B68F002EF73F /* Headers */,
+				38563B6F1DE5B68F002EF73F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SaystackMac;
+			productName = SaystackMac;
+			productReference = 38563B711DE5B68F002EF73F /* SaystackMac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		3888B69B1CF393070095EBD9 /* Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3888B6B91CF393070095EBD9 /* Build configuration list for PBXNativeTarget "Demo" */;
@@ -193,10 +379,12 @@
 				3888B6981CF393070095EBD9 /* Sources */,
 				3888B6991CF393070095EBD9 /* Frameworks */,
 				3888B69A1CF393070095EBD9 /* Resources */,
+				38563B581DE5B626002EF73F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				38563B501DE5B626002EF73F /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -227,10 +415,26 @@
 		3888B6941CF393070095EBD9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Unified Sense";
 				TargetAttributes = {
+					38563B3B1DE5B626002EF73F = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 289M6XEDV4;
+						ProvisioningStyle = Automatic;
+					};
+					38563B431DE5B626002EF73F = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 289M6XEDV4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3888B69B1CF393070095EBD9;
+					};
+					38563B701DE5B68F002EF73F = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 289M6XEDV4;
+						ProvisioningStyle = Automatic;
+					};
 					3888B69B1CF393070095EBD9 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 289M6XEDV4;
@@ -259,11 +463,35 @@
 			targets = (
 				3888B69B1CF393070095EBD9 /* Demo */,
 				3888B6AF1CF393070095EBD9 /* DemoTests */,
+				38563B3B1DE5B626002EF73F /* Saystack */,
+				38563B431DE5B626002EF73F /* SaystackTests */,
+				38563B701DE5B68F002EF73F /* SaystackMac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		38563B3A1DE5B626002EF73F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38563B421DE5B626002EF73F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38563B6F1DE5B68F002EF73F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3888B69A1CF393070095EBD9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,30 +512,58 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		38563B371DE5B626002EF73F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38563B641DE5B65C002EF73F /* UIImage+Loading.swift in Sources */,
+				38563B5C1DE5B642002EF73F /* NSDate+Utilities.swift in Sources */,
+				38563B681DE5B667002EF73F /* UITableView+Utilities.swift in Sources */,
+				38563B621DE5B656002EF73F /* UIDevice+Utilities.swift in Sources */,
+				38563B5F1DE5B64C002EF73F /* String+Utilities.swift in Sources */,
+				38563B661DE5B662002EF73F /* UINavigationController+Utilities.swift in Sources */,
+				38563B6A1DE5B66C002EF73F /* UIView+Position.swift in Sources */,
+				38563B5B1DE5B63F002EF73F /* NSAttributedString+Utilities.swift in Sources */,
+				38563B651DE5B65F002EF73F /* UIImage+Resize.swift in Sources */,
+				38563B6B1DE5B670002EF73F /* UIViewController+Alert.swift in Sources */,
+				38563B5E1DE5B64A002EF73F /* Number+Utilities.swift in Sources */,
+				38563B631DE5B659002EF73F /* UIFont+Utilities.swift in Sources */,
+				38563B601DE5B651002EF73F /* UIApplication+Utilities.swift in Sources */,
+				38563B5A1DE5B63C002EF73F /* Array+Utilities.swift in Sources */,
+				38563B691DE5B66A002EF73F /* UIView+Parent.swift in Sources */,
+				38563B671DE5B664002EF73F /* UIStoryboard+Utilities.swift in Sources */,
+				38563B611DE5B654002EF73F /* UIColor+Utilities.swift in Sources */,
+				38563B5D1DE5B647002EF73F /* NSThread+Display.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38563B401DE5B626002EF73F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38563B4C1DE5B626002EF73F /* SaystackTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38563B6C1DE5B68F002EF73F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38563B7B1DE5B69A002EF73F /* NSDate+Utilities.swift in Sources */,
+				38563B7E1DE5B6A1002EF73F /* String+Utilities.swift in Sources */,
+				38563B7A1DE5B698002EF73F /* NSAttributedString+Utilities.swift in Sources */,
+				38563B7D1DE5B69F002EF73F /* Number+Utilities.swift in Sources */,
+				38563B791DE5B693002EF73F /* Array+Utilities.swift in Sources */,
+				38563B7C1DE5B69D002EF73F /* NSThread+Display.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3888B6981CF393070095EBD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38D00B5E1D42E4DC00A0DC1D /* UIColor+Utilities.swift in Sources */,
-				38D00B4D1D42E4D400A0DC1D /* NSAttributedString+Utilities.swift in Sources */,
-				38D00B631D42E4DC00A0DC1D /* UITableView+Utilities.swift in Sources */,
-				38D00B4F1D42E4D400A0DC1D /* NSThread+Display.swift in Sources */,
-				38D00B5F1D42E4DC00A0DC1D /* UIFont+Utilities.swift in Sources */,
-				38D00B4E1D42E4D400A0DC1D /* NSDate+Utilities.swift in Sources */,
-				38D00B651D42E4DC00A0DC1D /* UIView+Position.swift in Sources */,
-				38D00B611D42E4DC00A0DC1D /* UIImage+Resize.swift in Sources */,
-				3866BC3C1D5948D3005519ED /* UIDevice+Utilities.swift in Sources */,
 				3888B6A21CF393070095EBD9 /* ViewController.swift in Sources */,
-				38D00B661D42E4DC00A0DC1D /* UIViewController+Alert.swift in Sources */,
-				38D00B601D42E4DC00A0DC1D /* UIImage+Loading.swift in Sources */,
 				3888B6A01CF393070095EBD9 /* AppDelegate.swift in Sources */,
-				38D00B5D1D42E4DC00A0DC1D /* UIApplication+Utilities.swift in Sources */,
-				388C8F0F1DB5063100CCC3F1 /* UINavigationController+Utilities.swift in Sources */,
-				38D00B501D42E4D400A0DC1D /* Number+Utilities.swift in Sources */,
-				38D00B641D42E4DC00A0DC1D /* UIView+Parent.swift in Sources */,
-				38D00B621D42E4DC00A0DC1D /* UIStoryboard+Utilities.swift in Sources */,
-				38D00B4C1D42E4D400A0DC1D /* Array+Utilities.swift in Sources */,
-				38D00B511D42E4D400A0DC1D /* String+Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +578,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		38563B471DE5B626002EF73F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38563B3B1DE5B626002EF73F /* Saystack */;
+			targetProxy = 38563B461DE5B626002EF73F /* PBXContainerItemProxy */;
+		};
+		38563B491DE5B626002EF73F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3888B69B1CF393070095EBD9 /* Demo */;
+			targetProxy = 38563B481DE5B626002EF73F /* PBXContainerItemProxy */;
+		};
+		38563B501DE5B626002EF73F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38563B3B1DE5B626002EF73F /* Saystack */;
+			targetProxy = 38563B4F1DE5B626002EF73F /* PBXContainerItemProxy */;
+		};
 		3888B6B21CF393070095EBD9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3888B69B1CF393070095EBD9 /* Demo */;
@@ -349,6 +620,153 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		38563B531DE5B626002EF73F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 289M6XEDV4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Saystack/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.Saystack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		38563B541DE5B626002EF73F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 289M6XEDV4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Saystack/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.Saystack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		38563B551DE5B626002EF73F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = 289M6XEDV4;
+				INFOPLIST_FILE = SaystackTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.SaystackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
+			};
+			name = Debug;
+		};
+		38563B561DE5B626002EF73F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = 289M6XEDV4;
+				INFOPLIST_FILE = SaystackTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.SaystackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
+			};
+			name = Release;
+		};
+		38563B771DE5B68F002EF73F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 289M6XEDV4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SaystackMac/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.SaystackMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		38563B781DE5B68F002EF73F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 289M6XEDV4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SaystackMac/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.SaystackMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		3888B6B71CF393070095EBD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -363,8 +781,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -409,8 +829,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -429,6 +851,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -437,6 +860,7 @@
 		3888B6BA1CF393070095EBD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 289M6XEDV4;
 				INFOPLIST_FILE = Demo/Info.plist;
@@ -451,6 +875,7 @@
 		3888B6BB1CF393070095EBD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 289M6XEDV4;
 				INFOPLIST_FILE = Demo/Info.plist;
@@ -493,6 +918,30 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		38563B571DE5B626002EF73F /* Build configuration list for PBXNativeTarget "Saystack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38563B531DE5B626002EF73F /* Debug */,
+				38563B541DE5B626002EF73F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		38563B591DE5B626002EF73F /* Build configuration list for PBXNativeTarget "SaystackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38563B551DE5B626002EF73F /* Debug */,
+				38563B561DE5B626002EF73F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		38563B761DE5B68F002EF73F /* Build configuration list for PBXNativeTarget "SaystackMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38563B771DE5B68F002EF73F /* Debug */,
+				38563B781DE5B68F002EF73F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3888B6971CF393070095EBD9 /* Build configuration list for PBXProject "Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
