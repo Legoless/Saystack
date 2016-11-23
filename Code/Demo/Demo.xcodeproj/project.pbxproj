@@ -43,6 +43,8 @@
 		3888B6A71CF393070095EBD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3888B6A61CF393070095EBD9 /* Assets.xcassets */; };
 		3888B6AA1CF393070095EBD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3888B6A81CF393070095EBD9 /* LaunchScreen.storyboard */; };
 		3888B6B51CF393070095EBD9 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B6B41CF393070095EBD9 /* DemoTests.swift */; };
+		38F2E1E01DE5C3FE0022BEED /* Range+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F2E1DF1DE5C3FE0022BEED /* Range+Utilities.swift */; };
+		38F2E1E11DE5C3FE0022BEED /* Range+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F2E1DF1DE5C3FE0022BEED /* Range+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +130,7 @@
 		38D00B5A1D42E4DC00A0DC1D /* UIView+Parent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Parent.swift"; sourceTree = "<group>"; };
 		38D00B5B1D42E4DC00A0DC1D /* UIView+Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Position.swift"; sourceTree = "<group>"; };
 		38D00B5C1D42E4DC00A0DC1D /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		38F2E1DF1DE5C3FE0022BEED /* Range+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Range+Utilities.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +264,7 @@
 				38D00B471D42E4D400A0DC1D /* NSAttributedString+Utilities.swift */,
 				38D00B491D42E4D400A0DC1D /* Thread+Display.swift */,
 				38D00B4A1D42E4D400A0DC1D /* Number+Utilities.swift */,
+				38F2E1DF1DE5C3FE0022BEED /* Range+Utilities.swift */,
 				38D00B4B1D42E4D400A0DC1D /* String+Utilities.swift */,
 			);
 			path = Core;
@@ -520,6 +524,7 @@
 				38563B5C1DE5B642002EF73F /* Date+Utilities.swift in Sources */,
 				38563B681DE5B667002EF73F /* UITableView+Utilities.swift in Sources */,
 				38563B621DE5B656002EF73F /* UIDevice+Utilities.swift in Sources */,
+				38F2E1E01DE5C3FE0022BEED /* Range+Utilities.swift in Sources */,
 				38563B5F1DE5B64C002EF73F /* String+Utilities.swift in Sources */,
 				38563B661DE5B662002EF73F /* UINavigationController+Utilities.swift in Sources */,
 				38563B6A1DE5B66C002EF73F /* UIView+Position.swift in Sources */,
@@ -549,6 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F2E1E11DE5C3FE0022BEED /* Range+Utilities.swift in Sources */,
 				38563B7B1DE5B69A002EF73F /* Date+Utilities.swift in Sources */,
 				38563B7E1DE5B6A1002EF73F /* String+Utilities.swift in Sources */,
 				38563B7A1DE5B698002EF73F /* NSAttributedString+Utilities.swift in Sources */,
@@ -925,6 +931,7 @@
 				38563B541DE5B626002EF73F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38563B591DE5B626002EF73F /* Build configuration list for PBXNativeTarget "SaystackTests" */ = {
 			isa = XCConfigurationList;
@@ -933,6 +940,7 @@
 				38563B561DE5B626002EF73F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38563B761DE5B68F002EF73F /* Build configuration list for PBXNativeTarget "SaystackMac" */ = {
 			isa = XCConfigurationList;
@@ -941,6 +949,7 @@
 				38563B781DE5B68F002EF73F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3888B6971CF393070095EBD9 /* Build configuration list for PBXProject "Demo" */ = {
 			isa = XCConfigurationList;
