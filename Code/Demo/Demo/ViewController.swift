@@ -6,6 +6,7 @@
 //  Copyright © 2016 Unified Sense. All rights reserved.
 //
 
+import Saystack
 import UIKit
 
 class ViewController: UIViewController {

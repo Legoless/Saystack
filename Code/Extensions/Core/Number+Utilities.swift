@@ -68,9 +68,9 @@ public extension Int32 {
 
 public extension UInt {
     public static func random(_ lower: UInt = min, upper: UInt = max) -> UInt {
-        switch (__WORDSIZE) {
-        case 32: return UInt(UInt32.random(UInt32(lower), upper: UInt32(upper)))
-        case 64: return UInt(UInt64.random(UInt64(lower), upper: UInt64(upper)))
+        switch (__WORDSIZE / CHAR_BIT) {
+        case 4: return UInt(UInt32.random(UInt32(lower), upper: UInt32(upper)))
+        case 8: return UInt(UInt64.random(UInt64(lower), upper: UInt64(upper)))
         default: return lower
         }
     }
@@ -78,9 +78,9 @@ public extension UInt {
 
 public extension Int {
     public static func random(_ lower: Int = min, upper: Int = max) -> Int {
-        switch (__WORDSIZE) {
-        case 32: return Int(Int32.random(Int32(lower), upper: Int32(upper)))
-        case 64: return Int(Int64.random(Int64(lower), upper: Int64(upper)))
+        switch (__WORDSIZE / CHAR_BIT) {
+        case 4: return Int(Int32.random(Int32(lower), upper: Int32(upper)))
+        case 8: return Int(Int64.random(Int64(lower), upper: Int64(upper)))
         default: return lower
         }
     }
