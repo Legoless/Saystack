@@ -41,5 +41,20 @@ extension Array {
         
         return shuffledArray
     }
+}
 
+extension Array {
+    public func containsType<T>(type: T.Type) -> Bool {
+        for object in self {
+            if object is T {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    public func containsType<T>(type: T) -> Bool {
+        return containsType(type: T.self)
+    }
 }

@@ -82,6 +82,15 @@ class ViewController: UIViewController {
         let elements = [ "one", "two", "three", "two", "three", "four" ]
         
         print ("Unique elements: \(elements.unique())")
+        
+        if let viewControllers = navigationController?.viewControllers {
+            let containsController = viewControllers.containsType(type: ViewController.self)
+            let containsAnotherClass = viewControllers.containsType(type: self)
+            let containsMissingClass = viewControllers.containsType(type: AppDelegate.self)
+            
+            print ("It contains view controller: \(view) contains: \(containsController) contains another: \(containsAnotherClass)")
+            print ("Does not contain: \(containsMissingClass)")
+        }
     }
 }
 
