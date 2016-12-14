@@ -72,14 +72,14 @@ if environment == .testFlight {
 }
 ```
 
-- UIImage resizing
+- `UIImage` resizing
 
 ```swift
 let image = UIImage(named: "test-image.png")!
 let resized = image.resize (CGSizeMake(100, 100))
 ```
 
-- Searching for parent view types in UIView
+- Searching for parent view types in `UIView`
 
 ```swift
 @IBAction func tableCellButtonTap(sender: UIButton) {
