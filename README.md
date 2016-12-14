@@ -53,7 +53,7 @@ print(array)
 let shuffled = [ 1, 2, 3, 4, 5 ].shuffled()
 
 //
-// Distinct
+// Unique elements
 //
 let uniqueArray = [ 1, 2, 1, 2, 4, 5 ].unique()
 // Prints [ 1, 2, 4, 5 ]
@@ -67,7 +67,7 @@ print(uniqueArray)
 ```swift
 let environment = UIApplication.environment
 
-if environment == .TestFlight {
+if environment == .testFlight {
     ...
 }
 ```
