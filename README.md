@@ -12,7 +12,7 @@ Saystack is a collection of simple classes and extensions for most common uses i
 
 Saystack adds many simple convenience methods to Swift API's. Multiple iOS and macOS frameworks are extended, including UIKit and Foundation. Both macOS and iOS are supported, but the framework is mainly targeting iOS, as macOS does not support UIKit.
 
-*Saystack only supports Swift 3.x from version 0.3.x forward. Use 0.2.x releases for Swift 2.x support.*
+*Saystack only supports Swift 3 from version 0.3.x onward. Use 0.2.x releases for Swift 2.x support.*
 
 ### Foundation
 
