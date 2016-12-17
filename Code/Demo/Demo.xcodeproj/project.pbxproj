@@ -426,11 +426,13 @@
 					38563B3B1DE5B626002EF73F = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 289M6XEDV4;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					38563B431DE5B626002EF73F = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 289M6XEDV4;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3888B69B1CF393070095EBD9;
 					};
@@ -442,12 +444,12 @@
 					3888B69B1CF393070095EBD9 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 289M6XEDV4;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 					3888B6AF1CF393070095EBD9 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 289M6XEDV4;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						TestTargetID = 3888B69B1CF393070095EBD9;
 					};
 				};
@@ -694,6 +696,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.SaystackTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
 			name = Debug;
@@ -712,6 +715,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.SaystackTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
 			name = Release;
