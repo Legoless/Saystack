@@ -45,6 +45,7 @@
 		3888B6B51CF393070095EBD9 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B6B41CF393070095EBD9 /* DemoTests.swift */; };
 		38F2E1E01DE5C3FE0022BEED /* Range+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F2E1DF1DE5C3FE0022BEED /* Range+Utilities.swift */; };
 		38F2E1E11DE5C3FE0022BEED /* Range+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F2E1DF1DE5C3FE0022BEED /* Range+Utilities.swift */; };
+		38FD957C1E056C5A0077117A /* UIImage+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD957B1E056C5A0077117A /* UIImage+Creation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		38D00B5B1D42E4DC00A0DC1D /* UIView+Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Position.swift"; sourceTree = "<group>"; };
 		38D00B5C1D42E4DC00A0DC1D /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		38F2E1DF1DE5C3FE0022BEED /* Range+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Range+Utilities.swift"; sourceTree = "<group>"; };
+		38FD957B1E056C5A0077117A /* UIImage+Creation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Creation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +279,7 @@
 				38D00B541D42E4DC00A0DC1D /* UIColor+Utilities.swift */,
 				3866BC3B1D5948D3005519ED /* UIDevice+Utilities.swift */,
 				38D00B551D42E4DC00A0DC1D /* UIFont+Utilities.swift */,
+				38FD957B1E056C5A0077117A /* UIImage+Creation.swift */,
 				38D00B561D42E4DC00A0DC1D /* UIImage+Loading.swift */,
 				38D00B571D42E4DC00A0DC1D /* UIImage+Resize.swift */,
 				388C8F0E1DB5063100CCC3F1 /* UINavigationController+Utilities.swift */,
@@ -528,6 +531,7 @@
 				38563B621DE5B656002EF73F /* UIDevice+Utilities.swift in Sources */,
 				38F2E1E01DE5C3FE0022BEED /* Range+Utilities.swift in Sources */,
 				38563B5F1DE5B64C002EF73F /* String+Utilities.swift in Sources */,
+				38FD957C1E056C5A0077117A /* UIImage+Creation.swift in Sources */,
 				38563B661DE5B662002EF73F /* UINavigationController+Utilities.swift in Sources */,
 				38563B6A1DE5B66C002EF73F /* UIView+Position.swift in Sources */,
 				38563B5B1DE5B63F002EF73F /* NSAttributedString+Utilities.swift in Sources */,
