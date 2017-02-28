@@ -23,7 +23,7 @@ let email3 = "1231241231".isValidEmail // false
 let email3 = "@example.com".isValidEmail // false
 ```
 
-- Random number generation
+- Pseudo Random number generation
 
 ```swift
 // Random Integer between 0 and 1000
