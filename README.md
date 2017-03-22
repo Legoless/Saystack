@@ -8,7 +8,7 @@
 [![Pod Platform](http://img.shields.io/cocoapods/p/Saystack.svg?style=flat)](http://cocoadocs.org/docsets/Saystack/)
 [![Pod License](http://img.shields.io/cocoapods/l/Saystack.svg?style=flat)](http://opensource.org/licenses/MIT)
 
-Saystack is a collection of simple classes and extensions for most common uses in any iOS Swift project. It is a Swift counterpart to [Haystack](https://github.com/legoless/Haystack).
+Saystack is a collection of classes and extensions for most common uses in any Swift project (mainly directed at iOS). It is a Swift counterpart to [Haystack](https://github.com/legoless/Haystack).
 
 Saystack adds many simple convenience methods to Swift API's. Multiple iOS and macOS frameworks are extended, including UIKit and Foundation. Both macOS and iOS are supported, but the framework is mainly targeting iOS, as macOS does not support UIKit.
 
@@ -23,7 +23,7 @@ let email3 = "1231241231".isValidEmail // false
 let email3 = "@example.com".isValidEmail // false
 ```
 
-- Random number generation
+- Pseudo Random number generation
 
 ```swift
 // Random Integer between 0 and 1000
