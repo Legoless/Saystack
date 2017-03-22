@@ -96,6 +96,21 @@ extension String {
         
         return string.characters.index(string.startIndex, offsetBy: range.location)..<string.characters.index(string.startIndex, offsetBy: range.location + range.length)
     }
+    
+    
+    ///
+    /// Returns English noun's possession: eg.: John -> John's, Lucas -> Lucas', based on:
+    /// http://dictionary.cambridge.org/grammar/british-grammar/determiners/possession-john-s-car-a-friend-of-mine
+    ///
+    /// - Returns: noun in possession's form
+    ///
+    public func possession () -> String {
+        if hasSuffix("s") {
+            return self + "'"
+        }
+        
+        return self + "'s"
+    }
 
     // based on https://gist.github.com/samuel-mellert/20b3c99dec168255a046
 	// which is based on https://gist.github.com/szhernovoy/276e69eb90a0de84dd90
