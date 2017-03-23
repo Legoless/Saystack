@@ -1,7 +1,7 @@
 # Saystack
 
-[![Issues on Waffle](https://img.shields.io/badge/issues on-Waffle-blue.svg)](http://waffle.io/legoless/Saystack)
-[![Swift Code](https://img.shields.io/badge/code in-Swift-orange.svg)](http://github.com/legoless/ViewModelable)
+[![Issues on Waffle](https://img.shields.io/badge/issue-on-Waffle-blue.svg)](http://waffle.io/legoless/Saystack)
+[![Swift Code](https://img.shields.io/badge/code-in-Swift-orange.svg)](http://github.com/legoless/ViewModelable)
 [![Build Status](https://travis-ci.org/Legoless/Saystack.svg)](https://travis-ci.org/legoless/Saystack)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Pod Version](http://img.shields.io/cocoapods/v/Saystack.svg?style=flat)](http://cocoadocs.org/docsets/Saystack/)
