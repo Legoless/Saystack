@@ -58,3 +58,24 @@ extension Array {
         return containsType(type: T.self)
     }
 }
+
+extension Array {
+    public func distinct(_ filter: ((Element) -> String)) -> Array {
+        
+        var hashes = Set<String>()
+        
+        var finalArray : [Element] = []
+        
+        for object in self {
+            let hash = filter(object)
+            
+            if !hashes.contains(hash) {
+                hashes.insert(hash)
+                
+                finalArray.append(object)
+            }
+        }
+        
+        return finalArray
+    }
+}
