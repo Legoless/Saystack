@@ -57,7 +57,12 @@ let uniqueArray = [ 1, 2, 1, 2, 4, 5 ].unique()
 // Prints [ 1, 2, 4, 5 ]
 print(uniqueArray)
 
-let distinctArrayByProperty = [ Person(name: "John"), Person(name: "John"), Person(name: "Mark") ].distinct({ $0.name })
+struct Person {
+    var name : String
+}
+
+let people = [ Person(name: "John"), Person(name: "John"), Person(name: "Mark"), Person(name: "John") ]
+let distinctArrayByProperty = people.distinct({ $0.name })
 // Prints [ Person("John"), Person("Mark") ]
 print(distinctArrayByProperty)
 ```
