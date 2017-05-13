@@ -60,7 +60,7 @@ extension Array {
 }
 
 extension Array {
-    public func distinct(_ filter: ((Element) -> String)) -> Array {
+    public func distinct(_ filter: ((Element) -> String?)) -> Array {
         
         var hashes = Set<String>()
         
@@ -69,7 +69,7 @@ extension Array {
         for object in self {
             let hash = filter(object)
             
-            if !hashes.contains(hash) {
+            if let hash = hash, !hashes.contains(hash) {
                 hashes.insert(hash)
                 
                 finalArray.append(object)
