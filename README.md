@@ -56,6 +56,10 @@ let shuffled = [ 1, 2, 3, 4, 5 ].shuffled()
 let uniqueArray = [ 1, 2, 1, 2, 4, 5 ].unique()
 // Prints [ 1, 2, 4, 5 ]
 print(uniqueArray)
+
+let distinctArrayByProperty = [ Person(name: "John"), Person(name: "John"), Person(name: "Mark") ].distinct({ $0.name })
+// Prints [ Person("John"), Person("Mark") ]
+print(distinctArrayByProperty)
 ```
 
 ### UIKit
