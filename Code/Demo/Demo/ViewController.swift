@@ -91,6 +91,8 @@ class ViewController: UIViewController {
             print ("It contains view controller: \(view) contains: \(containsController) contains another: \(containsAnotherClass)")
             print ("Does not contain: \(containsMissingClass)")
         }
+        
+        print ("Device identifier: \(UIDevice.current.modelIdentifier) - model: \(UIDevice.current.readableModel)")
     }
 }
 
