@@ -98,6 +98,12 @@ let resized = image.resize (CGSizeMake(100, 100))
 }
 ```
 
+- Device information
+
+```swift
+let device = UIDevice.current.modelName
+```
+
 Contact
 ======
 
