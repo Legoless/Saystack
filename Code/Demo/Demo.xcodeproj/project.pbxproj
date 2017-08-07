@@ -37,6 +37,7 @@
 		38563B7C1DE5B69D002EF73F /* Thread+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B491D42E4D400A0DC1D /* Thread+Display.swift */; };
 		38563B7D1DE5B69F002EF73F /* Number+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B4A1D42E4D400A0DC1D /* Number+Utilities.swift */; };
 		38563B7E1DE5B6A1002EF73F /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B4B1D42E4D400A0DC1D /* String+Utilities.swift */; };
+		3864BB851F38CC2B0041250B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3864BB841F38CC2B0041250B /* AdSupport.framework */; };
 		3888B6A01CF393070095EBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B69F1CF393070095EBD9 /* AppDelegate.swift */; };
 		3888B6A21CF393070095EBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B6A11CF393070095EBD9 /* ViewController.swift */; };
 		3888B6A51CF393070095EBD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3888B6A31CF393070095EBD9 /* Main.storyboard */; };
@@ -103,6 +104,7 @@
 		38563B711DE5B68F002EF73F /* SaystackMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SaystackMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38563B731DE5B68F002EF73F /* SaystackMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaystackMac.h; sourceTree = "<group>"; };
 		38563B741DE5B68F002EF73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3864BB841F38CC2B0041250B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		3866BC3B1D5948D3005519ED /* UIDevice+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utilities.swift"; sourceTree = "<group>"; };
 		3888B69C1CF393070095EBD9 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3888B69F1CF393070095EBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3864BB851F38CC2B0041250B /* AdSupport.framework in Frameworks */,
 				38563B511DE5B626002EF73F /* Saystack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +206,14 @@
 			path = SaystackMac;
 			sourceTree = "<group>";
 		};
+		3864BB831F38CC2B0041250B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3864BB841F38CC2B0041250B /* AdSupport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3888B6931CF393070095EBD9 = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +224,7 @@
 				38563B4A1DE5B626002EF73F /* SaystackTests */,
 				38563B721DE5B68F002EF73F /* SaystackMac */,
 				3888B69D1CF393070095EBD9 /* Products */,
+				3864BB831F38CC2B0041250B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

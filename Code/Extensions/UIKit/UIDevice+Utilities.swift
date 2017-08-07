@@ -6,6 +6,7 @@
 //  Copyright © 2016 Unified Sense. All rights reserved.
 //
 
+import ObjectiveC
 import UIKit
 
 extension UIDevice {
@@ -65,5 +66,102 @@ extension UIDevice {
             
             default:                                        return identifier
         }
+    }
+    
+    //
+    // MARK: Device identification
+    //
+    
+    private static let DeviceIdentifierKey = "Saystack.DeviceIdentifierKey"
+    
+    /*!
+     *  Returns unique devide identifier
+     */
+    public var deviceIdentifier : UUID {
+        if let advertisingIdentifier = advertisingIdentifier {
+            return advertisingIdentifier
+        }
+        
+        let userDefaults = UserDefaults.standard
+        
+        if let id = userDefaults.string(forKey: UIDevice.DeviceIdentifierKey), let uuid = UUID(uuidString: id) {
+            return uuid
+        }
+        
+        if let id = UIDevice.current.identifierForVendor {
+            userDefaults.set(id.uuidString, forKey: UIDevice.DeviceIdentifierKey)
+            
+            return id
+        }
+        
+        let id = UUID()
+        
+        userDefaults.set(id, forKey: UIDevice.DeviceIdentifierKey)
+        
+        return id
+    }
+    
+    /*!
+     *  Returns advertising identifier if AdSupport.framework is linked.
+     *
+     *  @note It uses Objective-C Runtime inspection to detect,
+     *  so no direct dependency to iAd is created in Swift.
+     */
+    private var advertisingIdentifier : UUID? {
+        guard let managerClass = NSClassFromString("ASIdentifierManager") as? NSObjectProtocol else {
+            return nil
+        }
+        
+        //
+        // To ensure the dynamic code works correctly and it is future proof, we check for each call that can crash it.
+        //
+        
+        let sharedSelector = NSSelectorFromString("sharedManager")
+        
+        if !managerClass.responds(to: sharedSelector) {
+            return nil
+        }
+        
+        guard let shared = managerClass.perform(sharedSelector) as? NSObjectProtocol else {
+            return nil
+        }
+        
+        guard let managerPointer = shared as? Swift.Unmanaged<AnyObject> else {
+            return nil
+        }
+        
+        guard let manager = managerPointer.takeUnretainedValue() as? NSObject else {
+            return nil
+        }
+        
+        //
+        // Check if advertising is enabled to respect Apple's policy
+        //
+        
+        let enabledSelector = NSSelectorFromString("isAdvertisingTrackingEnabled")
+        
+        if !manager.responds(to: enabledSelector) {
+            return nil
+        }
+        
+        guard let _ = manager.perform(enabledSelector) else {
+            return nil
+        }
+        
+        //
+        // Return advertising selector
+        //
+        
+        let advertisingSelector = NSSelectorFromString("advertisingIdentifier")
+        
+        if !manager.responds(to: advertisingSelector) {
+            return nil
+        }
+        
+        guard let identifier = manager.perform(advertisingSelector) else {
+            return nil
+        }
+        
+        return identifier.takeUnretainedValue() as? UUID
     }
 }

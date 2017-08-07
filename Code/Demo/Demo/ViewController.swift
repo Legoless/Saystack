@@ -92,7 +92,8 @@ class ViewController: UIViewController {
             print ("Does not contain: \(containsMissingClass)")
         }
         
-        print ("Device identifier: \(UIDevice.current.modelIdentifier) - model: \(UIDevice.current.readableModel)")
+        print ("Model identifier: \(UIDevice.current.modelIdentifier) - model: \(UIDevice.current.readableModel)")
+        print ("Device identifier: \(UIDevice.current.deviceIdentifier)")
     }
 }
 
