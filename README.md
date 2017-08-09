@@ -102,6 +102,9 @@ let resized = image.resize (CGSizeMake(100, 100))
 
 ```swift
 let device = UIDevice.current.modelName
+
+// Will use AdSupport.framework if available at runtime, otherwise vendorId.
+let identifier = UIDevice.current.deviceIdentifier
 ```
 
 Contact
