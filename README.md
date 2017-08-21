@@ -83,7 +83,7 @@ if environment == .testFlight {
 
 ```swift
 let image = UIImage(named: "test-image.png")!
-let resized = image.resize (CGSizeMake(100, 100))
+let resized = image.resize (CGSize(width: 100, height: 100))
 ```
 
 - Searching for parent view types in `UIView`
