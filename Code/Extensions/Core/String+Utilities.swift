@@ -28,7 +28,7 @@ extension String {
         }
         
         do {
-            return try NSAttributedString(data: data, options: [NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType,NSCharacterEncodingDocumentAttribute:String.Encoding.utf8], documentAttributes: nil)
+            return try NSAttributedString(data: data, options: [ .documentType : NSAttributedString.DocumentType.html, .characterEncoding : String.Encoding.utf8], documentAttributes: nil)
         } catch {
             return nil
         }
