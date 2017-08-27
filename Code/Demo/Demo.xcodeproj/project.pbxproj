@@ -102,8 +102,8 @@
 		38563B4B1DE5B626002EF73F /* SaystackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaystackTests.swift; sourceTree = "<group>"; };
 		38563B4D1DE5B626002EF73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38563B711DE5B68F002EF73F /* SaystackMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SaystackMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38563B731DE5B68F002EF73F /* SaystackMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaystackMac.h; sourceTree = "<group>"; };
-		38563B741DE5B68F002EF73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38563B731DE5B68F002EF73F /* SaystackMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SaystackMac.h; path = "../../Supporting Files/Mac/SaystackMac.h"; sourceTree = "<group>"; };
+		38563B741DE5B68F002EF73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../../Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		3864BB841F38CC2B0041250B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		3866BC3B1D5948D3005519ED /* UIDevice+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utilities.swift"; sourceTree = "<group>"; };
 		3888B69C1CF393070095EBD9 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +179,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		380A792D1F53569E00B493DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38563B3F1DE5B626002EF73F /* Info.plist */,
+				38563B3E1DE5B626002EF73F /* Saystack.h */,
+			);
+			name = "Supporting Files";
+			path = "../Supporting Files";
+			sourceTree = "<group>";
+		};
 		38563B4A1DE5B626002EF73F /* SaystackTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,8 +265,7 @@
 		3888B6BF1CF3930E0095EBD9 /* Saystack */ = {
 			isa = PBXGroup;
 			children = (
-				38563B3F1DE5B626002EF73F /* Info.plist */,
-				38563B3E1DE5B626002EF73F /* Saystack.h */,
+				380A792D1F53569E00B493DE /* Supporting Files */,
 				38D892FC1CF393B60074C10F /* Extensions */,
 			);
 			name = Saystack;
@@ -649,7 +658,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/../Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -676,7 +685,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/../Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -742,7 +751,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = SaystackMac/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/../Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -771,7 +780,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = SaystackMac/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/../Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
