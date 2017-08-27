@@ -94,6 +94,15 @@ class ViewController: UIViewController {
         
         print ("Model identifier: \(UIDevice.current.modelIdentifier) - model: \(UIDevice.current.readableModel)")
         print ("Device identifier: \(UIDevice.current.deviceIdentifier)")
+        
+        print ("Running on thread: \(Thread.current.threadId)")
+        
+        let queue = DispatchQueue(label: "com.unifiedsense.Saystack.background")
+        
+        queue.async {
+            print ("This is now running on thread: \(Thread.current.threadId)")
+        }
+        
     }
 }
 

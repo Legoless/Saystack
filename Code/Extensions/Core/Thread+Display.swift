@@ -12,8 +12,10 @@ extension Thread {
     public var threadId : String {
         get {
             var display = self.debugDescription
-            display = display.substring(from: display.range(of: "number = ")!.upperBound)
-            display = display.substring(to: display.range(of: ",")!.lowerBound)
+            let numberRange = display.range(of: "number = ")?.upperBound ?? display.startIndex
+            
+            display = String(display[numberRange...])
+            display = String(display[..<(display.range(of: ",")?.lowerBound ?? display.endIndex)])
             
             return display
         }

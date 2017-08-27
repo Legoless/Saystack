@@ -179,15 +179,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38563B3D1DE5B626002EF73F /* Saystack */ = {
-			isa = PBXGroup;
-			children = (
-				38563B3E1DE5B626002EF73F /* Saystack.h */,
-				38563B3F1DE5B626002EF73F /* Info.plist */,
-			);
-			path = Saystack;
-			sourceTree = "<group>";
-		};
 		38563B4A1DE5B626002EF73F /* SaystackTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,7 +211,6 @@
 				3888B6BF1CF3930E0095EBD9 /* Saystack */,
 				3888B69E1CF393070095EBD9 /* Demo */,
 				3888B6B31CF393070095EBD9 /* DemoTests */,
-				38563B3D1DE5B626002EF73F /* Saystack */,
 				38563B4A1DE5B626002EF73F /* SaystackTests */,
 				38563B721DE5B68F002EF73F /* SaystackMac */,
 				3888B69D1CF393070095EBD9 /* Products */,
@@ -265,6 +255,8 @@
 		3888B6BF1CF3930E0095EBD9 /* Saystack */ = {
 			isa = PBXGroup;
 			children = (
+				38563B3F1DE5B626002EF73F /* Info.plist */,
+				38563B3E1DE5B626002EF73F /* Saystack.h */,
 				38D892FC1CF393B60074C10F /* Extensions */,
 			);
 			name = Saystack;
@@ -657,7 +649,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Saystack/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -684,7 +676,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Saystack/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
