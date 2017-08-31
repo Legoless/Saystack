@@ -103,6 +103,18 @@ class ViewController: UIViewController {
             print ("This is now running on thread: \(Thread.current.threadId)")
         }
         
+        //
+        // Colors
+        //
+        
+        let argb1 = "#ABCD"
+        let argb2 = "#AABBCCDD"
+        
+        print("First color: \(argb1.argb2rgba()!)")
+        print("Second color: \(argb2.argb2rgba()!)")
+        
+        let thirdColor = try! UIColor(rgba_throws: "#AAB")
+        print("Third color: \(thirdColor)")
     }
 }
 
