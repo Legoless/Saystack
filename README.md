@@ -69,6 +69,8 @@ print(distinctArrayByProperty)
 
 ### UIKit
 
+Saystack provides several common UIKit extensions (not available on macOS).
+
 - Environment detection
 
 ```swift
