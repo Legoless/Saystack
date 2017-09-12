@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381AC96D1F67D4CD0022C788 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381AC96C1F67D4CD0022C788 /* AsyncOperation.swift */; };
+		381AC96E1F67D4CD0022C788 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381AC96C1F67D4CD0022C788 /* AsyncOperation.swift */; };
+		381AC9701F67D4E60022C788 /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381AC96F1F67D4E60022C788 /* AsyncBlockOperation.swift */; };
+		381AC9711F67D4E60022C788 /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381AC96F1F67D4E60022C788 /* AsyncBlockOperation.swift */; };
 		38563B451DE5B626002EF73F /* Saystack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38563B3C1DE5B626002EF73F /* Saystack.framework */; };
 		38563B4C1DE5B626002EF73F /* SaystackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38563B4B1DE5B626002EF73F /* SaystackTests.swift */; };
 		38563B4E1DE5B626002EF73F /* Saystack.h in Headers */ = {isa = PBXBuildFile; fileRef = 38563B3E1DE5B626002EF73F /* Saystack.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -97,6 +101,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		381AC96C1F67D4CD0022C788 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		381AC96F1F67D4E60022C788 /* AsyncBlockOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperation.swift; sourceTree = "<group>"; };
 		38563B3C1DE5B626002EF73F /* Saystack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Saystack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38563B3E1DE5B626002EF73F /* Saystack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Saystack.h; sourceTree = "<group>"; };
 		38563B3F1DE5B626002EF73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -277,6 +283,8 @@
 		38D00B451D42E4D400A0DC1D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				381AC96F1F67D4E60022C788 /* AsyncBlockOperation.swift */,
+				381AC96C1F67D4CD0022C788 /* AsyncOperation.swift */,
 				38D00B461D42E4D400A0DC1D /* Array+Utilities.swift */,
 				38D00B481D42E4D400A0DC1D /* Date+Utilities.swift */,
 				38D00B471D42E4D400A0DC1D /* NSAttributedString+Utilities.swift */,
@@ -543,6 +551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38563B641DE5B65C002EF73F /* UIImage+Loading.swift in Sources */,
+				381AC9701F67D4E60022C788 /* AsyncBlockOperation.swift in Sources */,
 				38563B5C1DE5B642002EF73F /* Date+Utilities.swift in Sources */,
 				38563B681DE5B667002EF73F /* UITableView+Utilities.swift in Sources */,
 				38563B621DE5B656002EF73F /* UIDevice+Utilities.swift in Sources */,
@@ -554,6 +563,7 @@
 				38563B5B1DE5B63F002EF73F /* NSAttributedString+Utilities.swift in Sources */,
 				38563B651DE5B65F002EF73F /* UIImage+Resize.swift in Sources */,
 				38563B6B1DE5B670002EF73F /* UIViewController+Alert.swift in Sources */,
+				381AC96D1F67D4CD0022C788 /* AsyncOperation.swift in Sources */,
 				38C19D741F558387004E20CE /* Log+Utilities.swift in Sources */,
 				38563B5E1DE5B64A002EF73F /* Number+Utilities.swift in Sources */,
 				38563B631DE5B659002EF73F /* UIFont+Utilities.swift in Sources */,
@@ -578,6 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381AC9711F67D4E60022C788 /* AsyncBlockOperation.swift in Sources */,
 				38F2E1E11DE5C3FE0022BEED /* Range+Utilities.swift in Sources */,
 				38563B7B1DE5B69A002EF73F /* Date+Utilities.swift in Sources */,
 				38563B7E1DE5B6A1002EF73F /* String+Utilities.swift in Sources */,
@@ -585,6 +596,7 @@
 				38563B7D1DE5B69F002EF73F /* Number+Utilities.swift in Sources */,
 				38563B791DE5B693002EF73F /* Array+Utilities.swift in Sources */,
 				38563B7C1DE5B69D002EF73F /* Thread+Display.swift in Sources */,
+				381AC96E1F67D4CD0022C788 /* AsyncOperation.swift in Sources */,
 				38C19D751F558387004E20CE /* Log+Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
