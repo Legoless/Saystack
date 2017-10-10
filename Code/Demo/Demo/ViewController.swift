@@ -6,8 +6,12 @@
 //  Copyright © 2016 Unified Sense. All rights reserved.
 //
 
+import os.log
 import Saystack
 import UIKit
+
+@available(iOS 10.0, *)
+let log = OSLog(subsystem: "com.unifiedsense.saystack.testing", category: "Testing")
 
 class ViewController: UIViewController {
 
@@ -115,6 +119,32 @@ class ViewController: UIViewController {
         
         let thirdColor = try! UIColor(rgba_throws: "#AAB")
         print("Third color: \(thirdColor)")
+        
+        //
+        // Logging
+        //
+        
+        let stringValue = "Acompany"
+        let intValue = 257
+        let doubleValue = 255.7
+        let booleanValue = false
+        let arrayMixed: [Any] = ["String", 257, 255.7, true]
+        let dictionary: [String:Any] = ["Key 1":"Acompany", "Key2": 257, "Key3": 255.7, "Key4": true]
+        let date = Date()
+        
+        
+        if #available(iOS 10.0, *) {
+            os_log("\nString value: %@,\n Int value %lu,\n Double: %.2f\nArray: %@,\n Boolean value: %@,\n Dictonary value: %@,\n Array count: %lu", log: log, type: .info, stringValue, intValue, doubleValue, array, booleanValue as CVarArg, dictionary, arrayMixed.count)
+            
+            os_log("Forced: %@, last ping %{time_t}d", log: log, type: .info, booleanValue as CVarArg, date as CVarArg)
+            
+            print("----------------")
+            
+            log.info("\nString value: %@,\n Int value %lu,\n Double: %.2f\nArray: %@,\n Boolean value: %@,\n Dictonary value: %@,\n Array count: %lu", stringValue, intValue, doubleValue, array, booleanValue as CVarArg, dictionary, arrayMixed.count)
+        } else {
+            // Fallback on earlier versions
+        }
+
     }
 }
 
