@@ -17,7 +17,7 @@ extension String {
     public func stripHTMLtags() -> String {
         let regex:NSRegularExpression = try! NSRegularExpression(pattern: "<.*?>", options: NSRegularExpression.Options.caseInsensitive)
         
-        let range = NSMakeRange(0, self.characters.count)
+        let range = NSMakeRange(0, self.count)
         
         return regex.stringByReplacingMatches(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range:range, withTemplate: "")
     }
@@ -57,7 +57,7 @@ extension String {
         
         do {
             let regex = try NSRegularExpression(pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", options: .caseInsensitive)
-            test = regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.characters.count)) != nil
+            test = regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.count)) != nil
         }
         catch {
             return false
@@ -94,7 +94,7 @@ extension String {
             return nil
         }
         
-        return string.characters.index(string.startIndex, offsetBy: range.location)..<string.characters.index(string.startIndex, offsetBy: range.location + range.length)
+        return string.index(string.startIndex, offsetBy: range.location)..<string.index(string.startIndex, offsetBy: range.location + range.length)
     }
     
     
@@ -114,13 +114,13 @@ extension String {
 
     // based on https://gist.github.com/samuel-mellert/20b3c99dec168255a046
 	// which is based on https://gist.github.com/szhernovoy/276e69eb90a0de84dd90
-	// Updated to work on Swift 2.2
+	// Updated to work on Swift 4
 
 	public static func random(length: Int = 20) -> String {
 		let charactersString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-		let charactersArray : [Character] = Array(charactersString.characters)
+		let charactersArray : [Character] = Array(charactersString)
         
-        let count = UInt32(charactersArray.count)
+        let count = UInt32(charactersString.count)
 
 		var string = ""
 		for _ in 0..<length {

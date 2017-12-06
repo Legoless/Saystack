@@ -101,14 +101,14 @@ extension UIColor {
             throw UIColorInputError.missingHashMarkAsPrefix
         }
         
-        let hexString: String = String(rgba[rgba.characters.index(rgba.startIndex, offsetBy: 1)...])
+        let hexString: String = String(rgba[rgba.index(rgba.startIndex, offsetBy: 1)...])
         var hexValue:  UInt32 = 0
         
         guard Scanner(string: hexString).scanHexInt32(&hexValue) else {
             throw UIColorInputError.unableToScanHexValue
         }
         
-        switch (hexString.characters.count) {
+        switch (hexString.count) {
         case 3:
             self.init(hex3: UInt16(hexValue))
         case 4:
@@ -180,16 +180,16 @@ extension String {
             return nil
         }
         
-        let hexString = String(self[self.characters.index(self.startIndex, offsetBy: 1)...])
-        switch (hexString.characters.count) {
+        let hexString = String(self[self.index(self.startIndex, offsetBy: 1)...])
+        switch (hexString.count) {
         case 4:
             return "#"
-                + hexString[self.characters.index(self.startIndex, offsetBy: 1)...]
-                + hexString[..<self.characters.index(self.startIndex, offsetBy: 1)]
+                + hexString[self.index(self.startIndex, offsetBy: 1)...]
+                + hexString[..<self.index(self.startIndex, offsetBy: 1)]
         case 8:
             return "#"
-                + hexString[self.characters.index(self.startIndex, offsetBy: 2)...]
-                + hexString[..<self.characters.index(self.startIndex, offsetBy: 2)]
+                + hexString[self.index(self.startIndex, offsetBy: 2)...]
+                + hexString[..<self.index(self.startIndex, offsetBy: 2)]
         default:
             return nil
         }
