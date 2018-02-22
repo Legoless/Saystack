@@ -68,7 +68,7 @@ extension UIApplication {
         if #available(iOS 10.0, *) {
             open(url, options: options, completionHandler: completion)
         } else {
-            openURL(url)
+            _ = openURL(url)
         }
     }
 }
