@@ -62,13 +62,15 @@ extension UIApplication {
         }
     }
     
+    /*
+    @available(iOSApplicationExtension, unavailable)
     public func openSettings(options: [String : Any] = [:], completionHandler completion: ((Bool) -> Void)? = nil) {
         let url = URL(string: UIApplicationOpenSettingsURLString)!
         
         if #available(iOS 10.0, *) {
             open(url, options: options, completionHandler: completion)
         } else {
-            _ = openURL(url)
+            openURL(url)
         }
-    }
+    }*/
 }
