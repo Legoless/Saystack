@@ -11,6 +11,9 @@
 		381AC96E1F67D4CD0022C788 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381AC96C1F67D4CD0022C788 /* AsyncOperation.swift */; };
 		381AC9701F67D4E60022C788 /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381AC96F1F67D4E60022C788 /* AsyncBlockOperation.swift */; };
 		381AC9711F67D4E60022C788 /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381AC96F1F67D4E60022C788 /* AsyncBlockOperation.swift */; };
+		38268AC620A2DCC70025D632 /* Encodable+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38268AC520A2DCC70025D632 /* Encodable+Utilities.swift */; };
+		38268AC720A2DCC70025D632 /* Encodable+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38268AC520A2DCC70025D632 /* Encodable+Utilities.swift */; };
+		38268AC820A2DCC70025D632 /* Encodable+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38268AC520A2DCC70025D632 /* Encodable+Utilities.swift */; };
 		38563B451DE5B626002EF73F /* Saystack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38563B3C1DE5B626002EF73F /* Saystack.framework */; };
 		38563B4C1DE5B626002EF73F /* SaystackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38563B4B1DE5B626002EF73F /* SaystackTests.swift */; };
 		38563B4E1DE5B626002EF73F /* Saystack.h in Headers */ = {isa = PBXBuildFile; fileRef = 38563B3E1DE5B626002EF73F /* Saystack.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -103,6 +106,7 @@
 /* Begin PBXFileReference section */
 		381AC96C1F67D4CD0022C788 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		381AC96F1F67D4E60022C788 /* AsyncBlockOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperation.swift; sourceTree = "<group>"; };
+		38268AC520A2DCC70025D632 /* Encodable+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Utilities.swift"; sourceTree = "<group>"; };
 		38563B3C1DE5B626002EF73F /* Saystack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Saystack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38563B3E1DE5B626002EF73F /* Saystack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Saystack.h; sourceTree = "<group>"; };
 		38563B3F1DE5B626002EF73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -286,6 +290,7 @@
 				381AC96F1F67D4E60022C788 /* AsyncBlockOperation.swift */,
 				381AC96C1F67D4CD0022C788 /* AsyncOperation.swift */,
 				38D00B461D42E4D400A0DC1D /* Array+Utilities.swift */,
+				38268AC520A2DCC70025D632 /* Encodable+Utilities.swift */,
 				38D00B481D42E4D400A0DC1D /* Date+Utilities.swift */,
 				38D00B471D42E4D400A0DC1D /* NSAttributedString+Utilities.swift */,
 				38C19D731F558387004E20CE /* Log+Utilities.swift */,
@@ -561,6 +566,7 @@
 				38563B661DE5B662002EF73F /* UINavigationController+Utilities.swift in Sources */,
 				38563B6A1DE5B66C002EF73F /* UIView+Position.swift in Sources */,
 				38563B5B1DE5B63F002EF73F /* NSAttributedString+Utilities.swift in Sources */,
+				38268AC720A2DCC70025D632 /* Encodable+Utilities.swift in Sources */,
 				38563B651DE5B65F002EF73F /* UIImage+Resize.swift in Sources */,
 				38563B6B1DE5B670002EF73F /* UIViewController+Alert.swift in Sources */,
 				381AC96D1F67D4CD0022C788 /* AsyncOperation.swift in Sources */,
@@ -588,6 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38268AC820A2DCC70025D632 /* Encodable+Utilities.swift in Sources */,
 				381AC9711F67D4E60022C788 /* AsyncBlockOperation.swift in Sources */,
 				38F2E1E11DE5C3FE0022BEED /* Range+Utilities.swift in Sources */,
 				38563B7B1DE5B69A002EF73F /* Date+Utilities.swift in Sources */,
@@ -607,6 +614,7 @@
 			files = (
 				3888B6A21CF393070095EBD9 /* ViewController.swift in Sources */,
 				3888B6A01CF393070095EBD9 /* AppDelegate.swift in Sources */,
+				38268AC620A2DCC70025D632 /* Encodable+Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
