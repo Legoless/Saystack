@@ -92,7 +92,7 @@ class ViewController: UIViewController {
             let containsAnotherClass = viewControllers.containsType(type: self)
             let containsMissingClass = viewControllers.containsType(type: AppDelegate.self)
             
-            print ("It contains view controller: \(view) contains: \(containsController) contains another: \(containsAnotherClass)")
+            print ("It contains view controller: \(String(describing: view)) contains: \(containsController) contains another: \(containsAnotherClass)")
             print ("Does not contain: \(containsMissingClass)")
         }
         
