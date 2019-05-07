@@ -13,7 +13,7 @@ import Foundation
 //
 
 public extension String {
-    public func nsRange(from range: Range<String.Index>) -> NSRange {
+    func nsRange(from range: Range<String.Index>) -> NSRange {
         
         return NSRange(range, in: self)
 
@@ -24,7 +24,7 @@ public extension String {
         return NSRange(location: utf16.distance(from: utf16.startIndex, to: from), length: utf16.distance(from: from, to: to))*/
     }
 
-    public func range(from nsRange: NSRange) -> Range<String.Index>? {
+    func range(from nsRange: NSRange) -> Range<String.Index>? {
         return Range(nsRange, in: self)
         
         /*guard let from16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location, limitedBy: utf16.endIndex), let to16 = utf16.index(from16, offsetBy: nsRange.length, limitedBy: utf16.endIndex), let from = String.Index(from16, within: self), let to = String.Index(to16, within: self) else { return nil }

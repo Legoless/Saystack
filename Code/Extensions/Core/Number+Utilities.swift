@@ -20,7 +20,7 @@ private func arc4random <T: ExpressibleByIntegerLiteral> (type: T.Type) -> T {
 }
 
 public extension UInt64 {
-    public static func random(from: UInt64 = min, to: UInt64 = max) -> UInt64 {
+    static func random(from: UInt64 = min, to: UInt64 = max) -> UInt64 {
         var m: UInt64
         let u = to - from
         var r = arc4random(type: UInt64.self)
@@ -40,7 +40,7 @@ public extension UInt64 {
 }
 
 public extension Int64 {
-    public static func random(from: Int64 = min, to: Int64 = max) -> Int64 {
+    static func random(from: Int64 = min, to: Int64 = max) -> Int64 {
         //let (s, overflow) = Int64.subtractWithOverflow(to, from)
         let (s, overflow) = to.subtractingReportingOverflow(from)
         let u = overflow ? UInt64.max - UInt64(~s) : UInt64(s)
@@ -68,7 +68,7 @@ public extension Int32 {
 }
 
 public extension UInt {
-    public static func random(from: UInt = min, to: UInt = max) -> UInt {
+    static func random(from: UInt = min, to: UInt = max) -> UInt {
         switch (__WORDSIZE / CHAR_BIT) {
         case 4: return UInt(UInt32.random(from: UInt32(from), to: UInt32(to)))
         case 8: return UInt(UInt64.random(from: UInt64(from), to: UInt64(to)))
@@ -78,7 +78,7 @@ public extension UInt {
 }
 
 public extension Int {
-    public static func random(from: Int = min, to: Int = max) -> Int {
+    static func random(from: Int = min, to: Int = max) -> Int {
         switch (__WORDSIZE / CHAR_BIT) {
         case 4: return Int(Int32.random(from: Int32(from), to: Int32(to)))
         case 8: return Int(Int64.random(from: Int64(from), to: Int64(to)))
@@ -88,13 +88,13 @@ public extension Int {
 }
 
 public extension Float {
-    public static func random() -> Float {
+    static func random() -> Float {
         return Float(UInt64.random()) / Float(UInt64.max)
     }
 }
 
 public extension Double {
-    public static func random() -> Double {
+    static func random() -> Double {
         return Double(UInt64.random()) / Double(UInt64.max)
     }
 }

@@ -14,6 +14,8 @@
 		38268AC620A2DCC70025D632 /* Encodable+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38268AC520A2DCC70025D632 /* Encodable+Utilities.swift */; };
 		38268AC720A2DCC70025D632 /* Encodable+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38268AC520A2DCC70025D632 /* Encodable+Utilities.swift */; };
 		38268AC820A2DCC70025D632 /* Encodable+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38268AC520A2DCC70025D632 /* Encodable+Utilities.swift */; };
+		3835D69322815D390007CC4C /* JSONDecoder+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3835D69222815D390007CC4C /* JSONDecoder+Utilities.swift */; };
+		3835D69422815D390007CC4C /* JSONDecoder+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3835D69222815D390007CC4C /* JSONDecoder+Utilities.swift */; };
 		38563B451DE5B626002EF73F /* Saystack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38563B3C1DE5B626002EF73F /* Saystack.framework */; };
 		38563B4C1DE5B626002EF73F /* SaystackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38563B4B1DE5B626002EF73F /* SaystackTests.swift */; };
 		38563B4E1DE5B626002EF73F /* Saystack.h in Headers */ = {isa = PBXBuildFile; fileRef = 38563B3E1DE5B626002EF73F /* Saystack.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -107,6 +109,7 @@
 		381AC96C1F67D4CD0022C788 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		381AC96F1F67D4E60022C788 /* AsyncBlockOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperation.swift; sourceTree = "<group>"; };
 		38268AC520A2DCC70025D632 /* Encodable+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Utilities.swift"; sourceTree = "<group>"; };
+		3835D69222815D390007CC4C /* JSONDecoder+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Utilities.swift"; sourceTree = "<group>"; };
 		38563B3C1DE5B626002EF73F /* Saystack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Saystack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38563B3E1DE5B626002EF73F /* Saystack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Saystack.h; sourceTree = "<group>"; };
 		38563B3F1DE5B626002EF73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -290,14 +293,15 @@
 				381AC96F1F67D4E60022C788 /* AsyncBlockOperation.swift */,
 				381AC96C1F67D4CD0022C788 /* AsyncOperation.swift */,
 				38D00B461D42E4D400A0DC1D /* Array+Utilities.swift */,
-				38268AC520A2DCC70025D632 /* Encodable+Utilities.swift */,
 				38D00B481D42E4D400A0DC1D /* Date+Utilities.swift */,
-				38D00B471D42E4D400A0DC1D /* NSAttributedString+Utilities.swift */,
+				38268AC520A2DCC70025D632 /* Encodable+Utilities.swift */,
+				3835D69222815D390007CC4C /* JSONDecoder+Utilities.swift */,
 				38C19D731F558387004E20CE /* Log+Utilities.swift */,
-				38D00B491D42E4D400A0DC1D /* Thread+Display.swift */,
+				38D00B471D42E4D400A0DC1D /* NSAttributedString+Utilities.swift */,
 				38D00B4A1D42E4D400A0DC1D /* Number+Utilities.swift */,
 				38F2E1DF1DE5C3FE0022BEED /* Range+Utilities.swift */,
 				38D00B4B1D42E4D400A0DC1D /* String+Utilities.swift */,
+				38D00B491D42E4D400A0DC1D /* Thread+Display.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -453,43 +457,44 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Unified Sense";
 				TargetAttributes = {
 					38563B3B1DE5B626002EF73F = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 289M6XEDV4;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					38563B431DE5B626002EF73F = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 289M6XEDV4;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3888B69B1CF393070095EBD9;
 					};
 					38563B701DE5B68F002EF73F = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 289M6XEDV4;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					3888B69B1CF393070095EBD9 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 289M6XEDV4;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 					};
 					3888B6AF1CF393070095EBD9 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 289M6XEDV4;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						TestTargetID = 3888B69B1CF393070095EBD9;
 					};
 				};
 			};
 			buildConfigurationList = 3888B6971CF393070095EBD9 /* Build configuration list for PBXProject "Demo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -573,6 +578,7 @@
 				38C19D741F558387004E20CE /* Log+Utilities.swift in Sources */,
 				38563B5E1DE5B64A002EF73F /* Number+Utilities.swift in Sources */,
 				38563B631DE5B659002EF73F /* UIFont+Utilities.swift in Sources */,
+				3835D69322815D390007CC4C /* JSONDecoder+Utilities.swift in Sources */,
 				38563B601DE5B651002EF73F /* UIApplication+Utilities.swift in Sources */,
 				38563B5A1DE5B63C002EF73F /* Array+Utilities.swift in Sources */,
 				38563B691DE5B66A002EF73F /* UIView+Parent.swift in Sources */,
@@ -603,6 +609,7 @@
 				38563B7D1DE5B69F002EF73F /* Number+Utilities.swift in Sources */,
 				38563B791DE5B693002EF73F /* Array+Utilities.swift in Sources */,
 				38563B7C1DE5B69D002EF73F /* Thread+Display.swift in Sources */,
+				3835D69422815D390007CC4C /* JSONDecoder+Utilities.swift in Sources */,
 				381AC96E1F67D4CD0022C788 /* AsyncOperation.swift in Sources */,
 				38C19D751F558387004E20CE /* Log+Utilities.swift in Sources */,
 			);
@@ -692,6 +699,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -718,6 +726,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -737,6 +746,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.SaystackTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
 			name = Debug;
@@ -755,6 +765,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.SaystackTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
 			name = Release;
@@ -782,6 +793,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -809,6 +821,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -818,6 +831,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -875,6 +889,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -933,6 +948,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.Saystack.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -947,6 +963,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.Saystack.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -959,6 +976,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.Saystack.DemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
 			name = Debug;
@@ -972,6 +990,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.Saystack.DemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
 			name = Release;

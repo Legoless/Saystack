@@ -46,8 +46,8 @@ extension UIView {
             return false
         }
         
-        let selfIndex = self.superview?.subviews.index(of: self)
-        let viewIndex = view.superview?.subviews.index(of: view)
+        let selfIndex = self.superview?.subviews.firstIndex(of: self)
+        let viewIndex = view.superview?.subviews.firstIndex(of: view)
         
         return selfIndex > viewIndex
     }
@@ -69,8 +69,8 @@ extension UIView {
             return false
         }
         
-        let selfIndex = self.superview?.subviews.index(of: self)
-        let viewIndex = view.superview?.subviews.index(of: view)
+        let selfIndex = self.superview?.subviews.firstIndex(of: self)
+        let viewIndex = view.superview?.subviews.firstIndex(of: view)
         
         return selfIndex < viewIndex
     }

@@ -9,7 +9,7 @@
 import Foundation
 
 public extension Encodable {
-    public func jsonString(with encoder: JSONEncoder) -> String? {
+    func jsonString(with encoder: JSONEncoder) -> String? {
         do {
             let encodedObject = try encoder.encode(self)
             

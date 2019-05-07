@@ -9,7 +9,7 @@
 import Foundation
 
 public extension Date {
-    public func numberOfMonths(date: Date) -> Int {
+    func numberOfMonths(date: Date) -> Int {
         let fromComponents = Calendar.current.dateComponents([.month, .year], from: self)
         let toComponents = Calendar.current.dateComponents([.month, .year], from: date)
         
