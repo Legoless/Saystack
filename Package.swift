@@ -9,6 +9,7 @@ let package = Package(
     targets: [
          .target(
             name: "Saystack",
+            path: "Code/Extensions",
             exclude: [
                 "Code/Supporting Files",
                 "Code/Demo"
