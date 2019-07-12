@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "BlubBlubCore",
+    name: "Saystack",
     products: [
         .library(name: "Saystack", targets: ["Saystack"]),
     ],
