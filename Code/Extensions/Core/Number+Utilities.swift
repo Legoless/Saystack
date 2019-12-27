@@ -69,21 +69,13 @@ public extension Int32 {
 
 public extension UInt {
     static func random(from: UInt = min, to: UInt = max) -> UInt {
-        switch (__WORDSIZE / CHAR_BIT) {
-        case 4: return UInt(UInt32.random(from: UInt32(from), to: UInt32(to)))
-        case 8: return UInt(UInt64.random(from: UInt64(from), to: UInt64(to)))
-        default: return from
-        }
+        return UInt(UInt64.random(from: UInt64(from), to: UInt64(to)))
     }
 }
 
 public extension Int {
     static func random(from: Int = min, to: Int = max) -> Int {
-        switch (__WORDSIZE / CHAR_BIT) {
-        case 4: return Int(Int32.random(from: Int32(from), to: Int32(to)))
-        case 8: return Int(Int64.random(from: Int64(from), to: Int64(to)))
-        default: return from
-        }
+        return Int(Int64.random(from: Int64(from), to: Int64(to)))
     }
 }
 
