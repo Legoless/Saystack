@@ -55,4 +55,8 @@ open class AsyncOperation : Operation {
         didChangeValue(forKey: "isExecuting")
         didChangeValue(forKey: "isFinished")
     }
+    
+    open override func cancel() {
+        complete()
+    }
 }
