@@ -25,10 +25,10 @@ extension UIColor {
  UnableToScanHexValue:      "Scan hex error"
  MismatchedHexStringLength: "Invalid RGB string, number of characters after '#' should be either 3, 4, 6 or 8"
  */
-public enum UIColorInputError : Error {
-    case unableToScanHexValue,
-    mismatchedHexStringLength,
-    unableToOutputHexStringForWideDisplayColor
+public enum UIColorInputError: Error {
+    case unableToInitialize
+    case mismatchedHexStringLength
+    case unableToOutputHexStringForWideDisplayColor
 }
 
 extension UIColor {
@@ -96,10 +96,10 @@ extension UIColor {
      */
     public convenience init(rgba_throws rgba: String) throws {
         let offset = rgba.hasPrefix("#") ? 1 : 0
-        let hexString: String = String(rgba[rgba.index(rgba.startIndex, offsetBy: offset)...])
+        let hexString = String(rgba[rgba.index(rgba.startIndex, offsetBy: offset)...])
         
         guard let hexValue = UInt32(hexString, radix: 16) else {
-            throw UIColorInputError.unableToScanHexValue
+            throw UIColorInputError.unableToInitialize
         }
         
         switch hexString.count {
