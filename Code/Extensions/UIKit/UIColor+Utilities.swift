@@ -22,15 +22,13 @@ extension UIColor {
 //  Copyright (c) 2014 P.D.Q. All rights reserved.
 //
 /**
- MissingHashMarkAsPrefix:   "Invalid RGB string, missing '#' as prefix"
  UnableToScanHexValue:      "Scan hex error"
  MismatchedHexStringLength: "Invalid RGB string, number of characters after '#' should be either 3, 4, 6 or 8"
  */
-public enum UIColorInputError : Error {
-    case missingHashMarkAsPrefix,
-    unableToScanHexValue,
-    mismatchedHexStringLength,
-    unableToOutputHexStringForWideDisplayColor
+public enum UIColorInputError: Error {
+    case unableToInitialize
+    case mismatchedHexStringLength
+    case unableToOutputHexStringForWideDisplayColor
 }
 
 extension UIColor {
@@ -97,18 +95,14 @@ extension UIColor {
      - parameter rgba: String value.
      */
     public convenience init(rgba_throws rgba: String) throws {
-        guard rgba.hasPrefix("#") else {
-            throw UIColorInputError.missingHashMarkAsPrefix
+        let offset = rgba.hasPrefix("#") ? 1 : 0
+        let hexString = String(rgba[rgba.index(rgba.startIndex, offsetBy: offset)...])
+        
+        guard let hexValue = UInt32(hexString, radix: 16) else {
+            throw UIColorInputError.unableToInitialize
         }
         
-        let hexString: String = String(rgba[rgba.index(rgba.startIndex, offsetBy: 1)...])
-        var hexValue:  UInt32 = 0
-        
-        guard Scanner(string: hexString).scanHexInt32(&hexValue) else {
-            throw UIColorInputError.unableToScanHexValue
-        }
-        
-        switch (hexString.count) {
+        switch hexString.count {
         case 3:
             self.init(hex3: UInt16(hexValue))
         case 4:
@@ -151,7 +145,7 @@ extension UIColor {
             throw UIColorInputError.unableToOutputHexStringForWideDisplayColor
         }
         
-        if (includeAlpha) {
+        if includeAlpha {
             return String(format: "#%02X%02X%02X%02X", Int(r * 255), Int(g * 255), Int(b * 255), Int(a * 255))
         } else {
             return String(format: "#%02X%02X%02X", Int(r * 255), Int(g * 255), Int(b * 255))

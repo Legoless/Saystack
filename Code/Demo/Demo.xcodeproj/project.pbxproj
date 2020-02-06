@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A28B6823EC26A5007AFD63 /* UIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A28B6723EC26A5007AFD63 /* UIColorTests.swift */; };
 		381AC96D1F67D4CD0022C788 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381AC96C1F67D4CD0022C788 /* AsyncOperation.swift */; };
 		381AC96E1F67D4CD0022C788 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381AC96C1F67D4CD0022C788 /* AsyncOperation.swift */; };
 		381AC9701F67D4E60022C788 /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381AC96F1F67D4E60022C788 /* AsyncBlockOperation.swift */; };
@@ -106,6 +107,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		18A28B6723EC26A5007AFD63 /* UIColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTests.swift; sourceTree = "<group>"; };
 		381AC96C1F67D4CD0022C788 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		381AC96F1F67D4E60022C788 /* AsyncBlockOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperation.swift; sourceTree = "<group>"; };
 		38268AC520A2DCC70025D632 /* Encodable+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Utilities.swift"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			children = (
 				38563B4B1DE5B626002EF73F /* SaystackTests.swift */,
 				38563B4D1DE5B626002EF73F /* Info.plist */,
+				18A28B6723EC26A5007AFD63 /* UIColorTests.swift */,
 			);
 			path = SaystackTests;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38563B4C1DE5B626002EF73F /* SaystackTests.swift in Sources */,
+				18A28B6823EC26A5007AFD63 /* UIColorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
