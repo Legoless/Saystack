@@ -6,6 +6,9 @@ let package = Package(
     products: [
         .library(name: "Saystack", targets: ["Saystack"]),
     ],
+    platforms: [
+        .iOS(.v11_2)
+    ],
     targets: [
          .target(
             name: "Saystack",
