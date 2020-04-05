@@ -3,11 +3,11 @@ import PackageDescription
 
 let package = Package(
     name: "Saystack",
-    products: [
-        .library(name: "Saystack", targets: ["Saystack"]),
-    ],
     platforms: [
         .iOS(.v12)
+    ],
+    products: [
+        .library(name: "Saystack", targets: ["Saystack"]),
     ],
     targets: [
          .target(
