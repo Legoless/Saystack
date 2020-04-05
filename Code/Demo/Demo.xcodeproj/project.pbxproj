@@ -47,6 +47,7 @@
 		38563B7C1DE5B69D002EF73F /* Thread+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B491D42E4D400A0DC1D /* Thread+Display.swift */; };
 		38563B7D1DE5B69F002EF73F /* Number+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B4A1D42E4D400A0DC1D /* Number+Utilities.swift */; };
 		38563B7E1DE5B6A1002EF73F /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D00B4B1D42E4D400A0DC1D /* String+Utilities.swift */; };
+		385FDCAE243A46D500408285 /* UIViewController+Traverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385FDCAD243A46D500408285 /* UIViewController+Traverse.swift */; };
 		3864BB851F38CC2B0041250B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3864BB841F38CC2B0041250B /* AdSupport.framework */; };
 		3888B6A01CF393070095EBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B69F1CF393070095EBD9 /* AppDelegate.swift */; };
 		3888B6A21CF393070095EBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888B6A11CF393070095EBD9 /* ViewController.swift */; };
@@ -121,6 +122,7 @@
 		38563B711DE5B68F002EF73F /* SaystackMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SaystackMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38563B731DE5B68F002EF73F /* SaystackMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SaystackMac.h; path = "../../Supporting Files/Mac/SaystackMac.h"; sourceTree = "<group>"; };
 		38563B741DE5B68F002EF73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../../Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		385FDCAD243A46D500408285 /* UIViewController+Traverse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Traverse.swift"; sourceTree = "<group>"; };
 		3864BB841F38CC2B0041250B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		3866BC3B1D5948D3005519ED /* UIDevice+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utilities.swift"; sourceTree = "<group>"; };
 		3888B69C1CF393070095EBD9 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -325,6 +327,7 @@
 				38D00B5A1D42E4DC00A0DC1D /* UIView+Parent.swift */,
 				38D00B5B1D42E4DC00A0DC1D /* UIView+Position.swift */,
 				38D00B5C1D42E4DC00A0DC1D /* UIViewController+Alert.swift */,
+				385FDCAD243A46D500408285 /* UIViewController+Traverse.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 			files = (
 				38563B641DE5B65C002EF73F /* UIImage+Loading.swift in Sources */,
 				381AC9701F67D4E60022C788 /* AsyncBlockOperation.swift in Sources */,
+				385FDCAE243A46D500408285 /* UIViewController+Traverse.swift in Sources */,
 				38563B5C1DE5B642002EF73F /* Date+Utilities.swift in Sources */,
 				38563B681DE5B667002EF73F /* UITableView+Utilities.swift in Sources */,
 				38563B621DE5B656002EF73F /* UIDevice+Utilities.swift in Sources */,
