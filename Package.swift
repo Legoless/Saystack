@@ -7,7 +7,7 @@ let package = Package(
         .library(name: "Saystack", targets: ["Saystack"]),
     ],
     platforms: [
-        .iOS(.v11_2)
+        .iOS(.v12)
     ],
     targets: [
          .target(
