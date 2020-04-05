@@ -48,21 +48,21 @@ public class SKProductFormatter : Formatter {
     }
     
     /// All formatted components that will be output as a string
-    var formatComponents: [ProductComponent] = [ .subscriptionPrice, .subscriptionDurationUnit ]
+    public var formatComponents: [ProductComponent] = [ .subscriptionPrice, .subscriptionDurationUnit ]
     
-    var priceFormatStyle : PriceFormatStyle = .noConversion
-    var durationUnitFormatStyle : DurationUnitFormatStyle = .normal
-    var durationUnitSeparator : String? = nil
+    public var priceFormatStyle : PriceFormatStyle = .noConversion
+    public var durationUnitFormatStyle : DurationUnitFormatStyle = .normal
+    public var durationUnitSeparator : String? = nil
     
-    var usePlural : Bool = true
-    var convertToQuarter : Bool = false
-    var componentSeparator = " "
+    public var usePlural : Bool = true
+    public var convertToQuarter : Bool = false
+    public var componentSeparator = " "
     
-    func componentStrings(from product: SKProduct) -> [String] {
+    public func componentStrings(from product: SKProduct) -> [String] {
         return formatComponents.compactMap { format(component: $0, with: product) }
     }
     
-    func string(from product: SKProduct) -> String? {
+    public func string(from product: SKProduct) -> String? {
         let formattedComponents = componentStrings(from: product)
         
         guard formattedComponents.count > 0 else {
