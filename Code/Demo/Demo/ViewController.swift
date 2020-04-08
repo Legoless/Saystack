@@ -8,6 +8,7 @@
 
 import os.log
 import Saystack
+import StoreKit
 import UIKit
 
 @available(iOS 10.0, *)
@@ -143,6 +144,138 @@ class ViewController: UIViewController {
             log.info("\nString value: %@,\n Int value %lu,\n Double: %.2f\nArray: %@,\n Boolean value: %@,\n Dictonary value: %@,\n Array count: %lu", stringValue, intValue, doubleValue, array, booleanValue as CVarArg, dictionary, arrayMixed.count)
         } else {
             // Fallback on earlier versions
+        }
+        
+        productFormatter()
+
+    }
+    
+    func productFormatter() {
+
+        let monthlyProduct = SKProduct(
+            productIdentifier: "com.tes",
+            price: NSDecimalNumber(floatLiteral: 15.0),
+            priceLocale: Locale.current,
+            period: SKProductSubscriptionPeriod(
+                numberOfUnits: 1,
+                periodUnit: .month
+            ),
+            introductoryPrice: SKProductDiscount(
+                price: NSDecimalNumber(0.0),
+                numberOfPeriods: 1,
+                subscriptionPeriod: SKProductSubscriptionPeriod(
+                    numberOfUnits: 1,
+                    periodUnit: .week),
+                paymentMode: .freeTrial
+            )
+        )
+
+        let weeklyProduct = SKProduct(
+            productIdentifier: "com.tes",
+            price: NSDecimalNumber(floatLiteral: 10.0),
+            priceLocale: Locale.current,
+            period: SKProductSubscriptionPeriod(
+                numberOfUnits: 1,
+                periodUnit: .week
+            ),
+            introductoryPrice: SKProductDiscount(
+                price: NSDecimalNumber(0.0),
+                numberOfPeriods: 1,
+                subscriptionPeriod: SKProductSubscriptionPeriod(
+                    numberOfUnits: 1,
+                    periodUnit: .week),
+                paymentMode: .freeTrial
+            )
+        )
+
+        let quarterlyProduct = SKProduct(
+            productIdentifier: "com.tes",
+            price: NSDecimalNumber(floatLiteral: 30.0),
+            priceLocale: Locale.current,
+            period: SKProductSubscriptionPeriod(
+                numberOfUnits: 3,
+                periodUnit: .month
+            ),
+            introductoryPrice: SKProductDiscount(
+                price: NSDecimalNumber(0.0),
+                numberOfPeriods: 1,
+                subscriptionPeriod: SKProductSubscriptionPeriod(
+                    numberOfUnits: 1,
+                    periodUnit: .week),
+                paymentMode: .freeTrial
+            )
+        )
+
+        let yearlyProduct = SKProduct(
+            productIdentifier: "com.tes",
+            price: NSDecimalNumber(floatLiteral: 60.0),
+            priceLocale: Locale.current,
+            period: SKProductSubscriptionPeriod(
+                numberOfUnits: 1,
+                periodUnit: .year
+            ),
+            introductoryPrice: SKProductDiscount(
+                price: NSDecimalNumber(0.0),
+                numberOfPeriods: 1,
+                subscriptionPeriod: SKProductSubscriptionPeriod(
+                    numberOfUnits: 1,
+                    periodUnit: .week),
+                paymentMode: .freeTrial
+            )
+        )
+
+        let products = [ weeklyProduct, monthlyProduct, quarterlyProduct, yearlyProduct ]
+
+        let simpleFormatter = SKProductFormatter()
+        simpleFormatter.formatComponents = [ .subscriptionDuration, .subscriptionDurationUnit ]
+
+        let weeklyBreakdownFormatter = SKProductFormatter()
+        weeklyBreakdownFormatter.formatComponents = [ .subscriptionPrice, .subscriptionDurationUnit ]
+        weeklyBreakdownFormatter.priceFormatStyle = .week
+        weeklyBreakdownFormatter.durationUnitSeparator = "/"
+
+        let monthlyBreakdownFormatter = SKProductFormatter()
+        monthlyBreakdownFormatter.formatComponents = [ .subscriptionPrice, .subscriptionDurationUnit ]
+        monthlyBreakdownFormatter.priceFormatStyle = .month
+        monthlyBreakdownFormatter.durationUnitSeparator = "per "
+
+        let simplePriceFormatter = SKProductFormatter()
+        simplePriceFormatter.formatComponents = [ .subscriptionPrice, .subscriptionDurationUnit ]
+        simplePriceFormatter.componentSeparator = "\n"
+        simplePriceFormatter.durationUnitSeparator = "per "
+
+        let speechBlubsMonthlyBreakdownFormatter = SKProductFormatter()
+        speechBlubsMonthlyBreakdownFormatter.formatComponents = [ .subscriptionDuration, .subscriptionDurationUnit ]
+        speechBlubsMonthlyBreakdownFormatter.priceFormatStyle = .month
+
+
+        let speechBlubsBreakdownFormatter = SKProductFormatter()
+        speechBlubsBreakdownFormatter.formatComponents = [ .subscriptionPrice, .subscriptionDurationUnit ]
+        speechBlubsBreakdownFormatter.priceFormatStyle = .month
+        speechBlubsBreakdownFormatter.durationUnitFormatStyle = .short
+        speechBlubsBreakdownFormatter.durationUnitSeparator = "/"
+        speechBlubsBreakdownFormatter.componentSeparator = ""
+
+
+        let formatters = [
+            simpleFormatter,
+            weeklyBreakdownFormatter,
+            monthlyBreakdownFormatter,
+            simplePriceFormatter,
+            speechBlubsMonthlyBreakdownFormatter,
+            speechBlubsBreakdownFormatter
+        ]
+
+        var counter = 1
+        for formatter in formatters {
+            print("Formatter: \(counter)")
+            for product in products {
+                print(formatter.string(from: product)!)
+            }
+            
+            print("----------------")
+            
+            counter += 1
         }
 
     }
