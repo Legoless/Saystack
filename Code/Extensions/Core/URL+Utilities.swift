@@ -8,7 +8,7 @@
 
 import Foundation
 
-if #available(iOS 10.0, macOS 10.12, *) {
+#if canImport(os) {
     import os
 }
 
