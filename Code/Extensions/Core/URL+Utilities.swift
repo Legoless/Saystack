@@ -14,7 +14,7 @@ extension URL {
     /// Loads a URL as a String, if possible
     /// - Parameter encoding: The encoding strategy used to decode the URL with.
     /// - Returns: A String representation of the URL, or nil if none exists
-    func loadAsString(using encoding: String.Encoding = .utf8) -> String? {
+    public func loadAsString(using encoding: String.Encoding = .utf8) -> String? {
         do {
             let data = try Data(contentsOf: self)
             return String(data: data, encoding: encoding)
