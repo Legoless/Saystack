@@ -7,7 +7,10 @@
 //
 
 import Foundation
-import os
+
+if #available(iOS 10.0, macOS 10.12, *) {
+    import os
+}
 
 extension URL {
     
