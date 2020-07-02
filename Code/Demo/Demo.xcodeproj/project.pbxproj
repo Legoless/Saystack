@@ -64,6 +64,7 @@
 		38F2E1E01DE5C3FE0022BEED /* Range+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F2E1DF1DE5C3FE0022BEED /* Range+Utilities.swift */; };
 		38F2E1E11DE5C3FE0022BEED /* Range+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F2E1DF1DE5C3FE0022BEED /* Range+Utilities.swift */; };
 		38FD957C1E056C5A0077117A /* UIImage+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD957B1E056C5A0077117A /* UIImage+Creation.swift */; };
+		67562DAD24ADE5260079F45C /* URL+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67562DAC24ADE5260079F45C /* URL+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +163,7 @@
 		38D00B5C1D42E4DC00A0DC1D /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		38F2E1DF1DE5C3FE0022BEED /* Range+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Range+Utilities.swift"; sourceTree = "<group>"; };
 		38FD957B1E056C5A0077117A /* UIImage+Creation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Creation.swift"; sourceTree = "<group>"; };
+		67562DAC24ADE5260079F45C /* URL+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utilities.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +326,7 @@
 				38F2E1DF1DE5C3FE0022BEED /* Range+Utilities.swift */,
 				38D00B4B1D42E4D400A0DC1D /* String+Utilities.swift */,
 				38D00B491D42E4D400A0DC1D /* Thread+Display.swift */,
+				67562DAC24ADE5260079F45C /* URL+Utilities.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67562DAD24ADE5260079F45C /* URL+Utilities.swift in Sources */,
 				38B75D25243DBE4D002283D5 /* SKProduct+Example.swift in Sources */,
 				3888B6A21CF393070095EBD9 /* ViewController.swift in Sources */,
 				3888B6A01CF393070095EBD9 /* AppDelegate.swift in Sources */,
