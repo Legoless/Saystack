@@ -19,7 +19,7 @@ extension URL {
             let data = try Data(contentsOf: self)
             return String(data: data, encoding: encoding)
         } catch(let error) {
-            if #available(iOS 10.0, *) {
+            if #available(iOS 10.0, macOS 10.12, *) {
                 os_log("Error parsing URL data. Description: %@", error.localizedDescription)
             } else {
                 NSLog("Error parsing URL data. Description: %@", error.localizedDescription)
