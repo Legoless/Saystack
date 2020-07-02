@@ -8,9 +8,9 @@
 
 import Foundation
 
-#if canImport(os) {
-    import os
-}
+#if canImport(os) 
+import os
+#endif
 
 extension URL {
     
