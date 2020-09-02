@@ -11,6 +11,7 @@ import Foundation
 open class AsyncOperation : Operation {
     private var _executing : Bool = false
     private var _finished : Bool = false
+    private var _cancelled: Bool = false
     
     open override var isAsynchronous: Bool {
         return true
@@ -24,12 +25,12 @@ open class AsyncOperation : Operation {
         return _finished
     }
     
-    open override func start () {
+    open override var isCancelled: Bool {
+        return _cancelled
+    }
+    
+    open override func start() {
         if isCancelled {
-            self.willChangeValue(forKey: "isFinished")
-            self._finished = true
-            self.didChangeValue(forKey: "isFinished")
-            
             return
         }
         
@@ -39,13 +40,7 @@ open class AsyncOperation : Operation {
         didChangeValue(forKey: "isExecuting")
     }
     
-    open override func main () {
-        if self.isCancelled {
-            return
-        }
-    }
-    
-    open func complete () {
+    open func complete() {
         willChangeValue(forKey: "isFinished")
         willChangeValue(forKey: "isExecuting")
         
@@ -57,6 +52,10 @@ open class AsyncOperation : Operation {
     }
     
     open override func cancel() {
+        willChangeValue(forKey: "isCancelled")
+        _cancelled = true
+        didChangeValue(forKey: "isCancelled")
+        
         complete()
     }
 }
