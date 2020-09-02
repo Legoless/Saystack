@@ -34,11 +34,19 @@ open class AsyncBlockOperation : AsyncOperation {
         // Run all blocks and wait for them to finish.
         //
         for block in executionBlocks {
+            guard !isCancelled else {
+                break
+            }
+            
             block(self)
         }
     }
     
     open override func complete() {
+        guard !isCancelled else {
+            return
+        }
+        
         completedCount += 1
         
         //
