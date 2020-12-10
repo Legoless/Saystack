@@ -80,7 +80,7 @@ extension UIDevice {
             case "iPad4,4", "iPad4,5", "iPad4,6":           return "iPad Mini 2"
             case "iPad4,7", "iPad4,8", "iPad4,9":           return "iPad Mini 3"
             case "iPad5,1", "iPad5,2":                      return "iPad Mini 4"
-            case "iPad11,1", "iPad11,2":                    return "iPad Mini 5th Gen"
+            case "iPad11,1", "iPad11,2":                    return "iPad Mini 5"
                 
             case "iPad6,3", "iPad6,4":                      return "iPad Pro 9.7 Inch"
             case "iPad6,7", "iPad6,8":                      return "iPad Pro 12.9 Inch"
