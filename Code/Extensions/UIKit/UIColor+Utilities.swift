@@ -163,6 +163,14 @@ extension UIColor {
         }
         return hexString
     }
+    
+    /**
+     Inverted color
+    */
+    var inverted: UIColor {
+        var a = CGFloat(0.0), r: CGFloat = CGFloat(0.0), g: CGFloat = CGFloat(0.0), b: CGFloat = CGFloat(0.0)
+        return getRed(&r, green: &g, blue: &b, alpha: &a) ? UIColor(red: 1.0-r, green: 1.0-g, blue: 1.0-b, alpha: a) : .black
+    }
 }
 
 extension String {
