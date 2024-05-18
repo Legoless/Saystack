@@ -17,4 +17,8 @@ extension UIImage {
         
         return imageResized!
     }
+
+    public func resize (factor: CGFloat) -> UIImage {
+        return resize(size: CGSize(width: size.width * factor, height: size.height * factor))
+    }
 }
