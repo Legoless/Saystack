@@ -10,7 +10,7 @@ import Foundation
 
 public typealias AsyncBlock = (AsyncOperation) -> Void
 
-open class AsyncBlockOperation : AsyncOperation {
+open class AsyncBlockOperation : AsyncOperation, @unchecked Sendable {
     
     private(set) var executionBlocks : [AsyncBlock] = []
     private var completedCount = 0

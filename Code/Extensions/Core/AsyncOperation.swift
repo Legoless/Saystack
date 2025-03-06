@@ -8,7 +8,8 @@
 
 import Foundation
 
-open class AsyncOperation : Operation {
+
+open class AsyncOperation : Operation, @unchecked Sendable {
     private var _executing : Bool = false
     private var _finished : Bool = false
     private var _cancelled: Bool = false
