@@ -1,13 +1,5 @@
 # Saystack
 
-[![Issues on Waffle](https://img.shields.io/badge/issues%20on-Waffle-blue.svg)](http://waffle.io/legoless/Saystack)
-[![Swift Code](https://img.shields.io/badge/code%20in-Swift-orange.svg)](http://github.com/legoless/ViewModelable)
-[![Build Status](https://travis-ci.org/Legoless/Saystack.svg)](https://travis-ci.org/legoless/Saystack)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Pod Version](http://img.shields.io/cocoapods/v/Saystack.svg?style=flat)](http://cocoadocs.org/docsets/Saystack/)
-[![Pod Platform](http://img.shields.io/cocoapods/p/Saystack.svg?style=flat)](http://cocoadocs.org/docsets/Saystack/)
-[![Pod License](http://img.shields.io/cocoapods/l/Saystack.svg?style=flat)](http://opensource.org/licenses/MIT)
-
 Saystack is a collection of classes and extensions for most common uses in any Swift project (mainly directed at iOS). It is a Swift counterpart to [Haystack](https://github.com/legoless/Haystack), which has been deprecated.
 
 Saystack adds many convenience methods to native Swift API's. Multiple iOS and macOS frameworks are extended, including UIKit and Foundation. Both macOS and iOS are supported, but the framework is mainly targeting iOS, as macOS does not support UIKit.
