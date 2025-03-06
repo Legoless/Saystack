@@ -98,7 +98,7 @@ class ViewController: UIViewController {
         }
         
         print ("Model identifier: \(UIDevice.current.modelIdentifier) - model: \(UIDevice.current.readableModel)")
-        print ("Device identifier: \(UIDevice.current.deviceIdentifier)")
+        print ("Device identifier: \(String(describing: UIDevice.current.identifierForVendor))")
         
         print ("Running on thread: \(Thread.current.threadId)")
         
