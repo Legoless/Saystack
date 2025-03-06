@@ -13,9 +13,11 @@ import Foundation
 // http://stackoverflow.com/questions/24007129/how-does-one-generate-a-random-number-in-apples-swift-language
 //
 
-private func arc4random <T: ExpressibleByIntegerLiteral> (type: T.Type) -> T {
-    var r: T = 0
-    arc4random_buf(&r, MemoryLayout<T>.size)
+private func arc4random <T: FixedWidthInteger> (type: T.Type) -> T {
+    var r = T.zero
+    withUnsafeMutableBytes(of: &r) { buffer in
+        arc4random_buf(buffer.baseAddress, buffer.count)
+    }
     return r
 }
 
