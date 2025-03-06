@@ -7,7 +7,7 @@
 //     "Tooth".pluralize
 //     "Nutrtion".pluralize
 //     "House".pluralize(count: 1)
-//     "Person".pluralize(count: 2, with: "Persons")
+//     "Person".pluralize(count: 2, template: "Persons")
 //
 // Copyright (c) 2014 Joshua Arvin Lat
 //
@@ -33,11 +33,11 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 import Foundation
 
-public class Pluralize {
-    static let sharedInstance = Pluralize()
+@globalActor actor Pluralize {
+    public static let shared = Pluralize()
     
-    var uncountables:[String] = []
-    var rules:[(rule: String, template: String)] = []
+    private var uncountables:[String] = []
+    private var rules:[(rule: String, template: String)] = []
     
     private init() {
         uncountables = [
@@ -76,69 +76,69 @@ public class Pluralize {
             "tolerance", "toys", "traffic", "transporation", "travel", "trust", "understanding",
             "unemployment", "unity", "validity", "veal", "vengeance", "violence"]
         
-        rule(rule: "$", with:"$1s")
-        rule(rule: "s$", with:"$1ses")
-        rule(rule: "(t|r|l|b)y$", with:"$1ies")
-        rule(rule: "x$", with:"$1xes")
-        rule(rule: "(sh|zz|ss)$", with:"$1es")
-        rule(rule: "(ax)is", with: "$1es")
-        rule(rule: "(cact|nucle|alumn|bacill|fung|radi|stimul|syllab)us$", with:"$1i")
-        rule(rule: "(corp)us$", with:"$1ora")
-        rule(rule: "sis$", with:"$1ses")
-        rule(rule: "ch$", with:"$1ches")
-        rule(rule: "o$", with:"$1os")
-        rule(rule: "(buffal|carg|mosquit|torped|zer|vet|her|ech)o$", with:"$1oes")
-        rule(rule: "fe$", with:"$1ves")
-        rule(rule: "(thie)f$", with:"$1ves")
-        rule(rule: "oaf$", with:"$1oaves")
-        rule(rule: "um$", with:"$1a")
-        rule(rule: "ium$", with:"$1ia")
-        rule(rule: "oof$", with:"$1ooves")
-        rule(rule: "(nebul)a", with:"$1ae")
-        rule(rule: "(criteri|phenomen)on$", with:"$1a")
-        rule(rule: "(potat|tomat|volcan)o$", with:"$1oes")
-        rule(rule: "^(|wo|work|fire)man$", with: "$1men")
-        rule(rule: "(f)oot$", with: "$1eet")
-        rule(rule: "lf$", with: "$1lves")
-        rule(rule: "(t)ooth$", with: "$1eeth")
-        rule(rule: "(g)oose$", with: "$1eese")
-        rule(rule: "^(c)hild$", with: "$1hildren")
-        rule(rule: "^(o)x$", with: "$1xen")
-        rule(rule: "^(p)erson$", with: "$1eople")
-        rule(rule: "(m|l)ouse$", with: "$1ice")
-        rule(rule: "^(d)ie$", with: "$1ice")
-        rule(rule: "^(alg|vertebr|vit)a$", with: "$1ae")
-        rule(rule: "^(a)lumna$", with: "$1lumnae")
-        rule(rule: "^(a)pparatus$", with: "$1pparatuses")
-        rule(rule: "^(ind)ex$", with: "$1ices")
-        rule(rule: "^(append|matr)ix$", with: "$1ices")
-        rule(rule: "^(b|tabl)eau$", with: "$1eaux")
-        rule(rule: "arf$", with: "$1arves")
-        rule(rule: "(embarg)o$", with: "$1oes")
-        rule(rule: "(gen)us$", with: "$1era")
-        rule(rule: "(r)oof$", with: "$1oofs")
-        rule(rule: "(l)eaf$", with: "$1eaves")
-        rule(rule: "(millen)ium$", with: "$1ia")
-        rule(rule: "(th)at$", with: "$1ose")
-        rule(rule: "(th)is$", with: "$1ese")
+        rules.insert((rule: "$", template: "$1s"), at: 0)
+        rules.insert((rule: "s$", template: "$1ses"), at: 0)
+        rules.insert((rule: "(t|r|l|b)y$", template: "$1ies"), at: 0)
+        rules.insert((rule: "x$", template: "$1xes"), at: 0)
+        rules.insert((rule: "(sh|zz|ss)$", template: "$1es"), at: 0)
+        rules.insert((rule: "(ax)is", template: "$1es"), at: 0)
+        rules.insert((rule: "(cact|nucle|alumn|bacill|fung|radi|stimul|syllab)us$", template: "$1i"), at: 0)
+        rules.insert((rule: "(corp)us$", template: "$1ora"), at: 0)
+        rules.insert((rule: "sis$", template: "$1ses"), at: 0)
+        rules.insert((rule: "ch$", template: "$1ches"), at: 0)
+        rules.insert((rule: "o$", template: "$1os"), at: 0)
+        rules.insert((rule: "(buffal|carg|mosquit|torped|zer|vet|her|ech)o$", template: "$1oes"), at: 0)
+        rules.insert((rule: "fe$", template: "$1ves"), at: 0)
+        rules.insert((rule: "(thie)f$", template: "$1ves"), at: 0)
+        rules.insert((rule: "oaf$", template: "$1oaves"), at: 0)
+        rules.insert((rule: "um$", template: "$1a"), at: 0)
+        rules.insert((rule: "ium$", template: "$1ia"), at: 0)
+        rules.insert((rule: "oof$", template: "$1ooves"), at: 0)
+        rules.insert((rule: "(nebul)a", template: "$1ae"), at: 0)
+        rules.insert((rule: "(criteri|phenomen)on$", template: "$1a"), at: 0)
+        rules.insert((rule: "(potat|tomat|volcan)o$", template: "$1oes"), at: 0)
+        rules.insert((rule: "^(|wo|work|fire)man$", template: "$1men"), at: 0)
+        rules.insert((rule: "(f)oot$", template: "$1eet"), at: 0)
+        rules.insert((rule: "lf$", template: "$1lves"), at: 0)
+        rules.insert((rule: "(t)ooth$", template: "$1eeth"), at: 0)
+        rules.insert((rule: "(g)oose$", template: "$1eese"), at: 0)
+        rules.insert((rule: "^(c)hild$", template: "$1hildren"), at: 0)
+        rules.insert((rule: "^(o)x$", template: "$1xen"), at: 0)
+        rules.insert((rule: "^(p)erson$", template: "$1eople"), at: 0)
+        rules.insert((rule: "(m|l)ouse$", template: "$1ice"), at: 0)
+        rules.insert((rule: "^(d)ie$", template: "$1ice"), at: 0)
+        rules.insert((rule: "^(alg|vertebr|vit)a$", template: "$1ae"), at: 0)
+        rules.insert((rule: "^(a)lumna$", template: "$1lumnae"), at: 0)
+        rules.insert((rule: "^(a)pparatus$", template: "$1pparatuses"), at: 0)
+        rules.insert((rule: "^(ind)ex$", template: "$1ices"), at: 0)
+        rules.insert((rule: "^(append|matr)ix$", template: "$1ices"), at: 0)
+        rules.insert((rule: "^(b|tabl)eau$", template: "$1eaux"), at: 0)
+        rules.insert((rule: "arf$", template: "$1arves"), at: 0)
+        rules.insert((rule: "(embarg)o$", template: "$1oes"), at: 0)
+        rules.insert((rule: "(gen)us$", template: "$1era"), at: 0)
+        rules.insert((rule: "(r)oof$", template: "$1oofs"), at: 0)
+        rules.insert((rule: "(l)eaf$", template: "$1eaves"), at: 0)
+        rules.insert((rule: "(millen)ium$", template: "$1ia"), at: 0)
+        rules.insert((rule: "(th)at$", template: "$1ose"), at: 0)
+        rules.insert((rule: "(th)is$", template: "$1ese"), at: 0)
         
-        unchanging(word: "sheep")
-        unchanging(word: "deer")
-        unchanging(word: "moose")
-        unchanging(word: "swine")
-        unchanging(word: "bison")
-        unchanging(word: "corps")
-        unchanging(word: "means")
-        unchanging(word: "series")
-        unchanging(word: "scissors")
-        unchanging(word: "species")
+        uncountables.insert("sheep", at: 0)
+        uncountables.insert("deer", at: 0)
+        uncountables.insert("moose", at: 0)
+        uncountables.insert("swine", at: 0)
+        uncountables.insert("bison", at: 0)
+        uncountables.insert("corps", at: 0)
+        uncountables.insert("means", at: 0)
+        uncountables.insert("series", at: 0)
+        uncountables.insert("scissors", at: 0)
+        uncountables.insert("species", at: 0)
     }
     
-    public class func apply(word: String) -> String {
-        if sharedInstance.uncountables.contains(word.lowercased()) || String(word).count == 0 {
+    @Pluralize public static func apply(word: String) async -> String {
+        if await shared.uncountables.contains(word.lowercased()) || String(word).count == 0 {
             return word
         } else {
-            for pair in sharedInstance.rules {
+            for pair in await shared.rules {
                 let newValue = regexReplace(input: word, pattern: pair.rule, template: pair.template)
                 if newValue != word {
                     return newValue
@@ -149,27 +149,26 @@ public class Pluralize {
         return word
     }
     
-    public class func rule(rule: String, with template: String) {
-        sharedInstance.rule(rule: rule, with: template)
+    @Pluralize public static func rule(rule: String, with template: String) async {
+        await shared.rule(rule: rule, with: template)
     }
     
-    public class func uncountable(word: String) {
-        sharedInstance.uncountable(word: word)
+    @Pluralize public static func uncountable(word: String) async {
+        await shared.uncountable(word: word)
     }
     
-    public class func unchanging(word: String) {
-        sharedInstance.unchanging(word: word)
+    @Pluralize public static func unchanging(word: String) async {
+        await shared.unchanging(word: word)
     }
     
-    
-    private class func regexReplace(input: String, pattern: String, template: String) -> String {
+    private static func regexReplace(input: String, pattern: String, template: String) -> String {
         let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
         let range = NSMakeRange(0, String(input).count)
         let output = regex.stringByReplacingMatches(in: input, options: [], range: range, withTemplate: template)
         return output
     }
     
-    private func rule(rule: String, with template: String) {
+   private func rule(rule: String, with template: String) {
         rules.insert((rule: rule, template: template), at: 0)
     }
     
@@ -184,13 +183,28 @@ public class Pluralize {
 
 extension String {
     public func pluralize(count: Int = 2, with: String = "") -> String {
+        let semaphore = DispatchSemaphore(value: 0)
+        var result = self
+        
+        Task {
+            result = await pluralize(count: count, with: with)
+            
+            semaphore.signal()
+        }
+        
+        semaphore.wait()
+        
+        return result
+    }
+    
+    @Pluralize public func pluralize(count: Int = 2, with: String = "") async -> String {
         if count == 1 {
             return self
         } else {
             if with.length != 0 {
                 return with
             } else {
-                return Pluralize.apply(word: self)
+                return await Pluralize.apply(word: self)
             }
         }
     }
