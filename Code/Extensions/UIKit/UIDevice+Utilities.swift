@@ -11,7 +11,11 @@ import UIKit
 
 extension UIDevice {
     public var isSimulator : Bool {
-        return TARGET_OS_SIMULATOR != 0
+        #if targetEnvironment(simulator)
+        return true
+        #else
+        return false
+        #endif
     }
     
     public var modelIdentifier : String {
