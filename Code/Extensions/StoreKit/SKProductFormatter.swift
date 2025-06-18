@@ -9,6 +9,7 @@
 import Foundation
 import StoreKit
 
+@MainActor
 public class SKProductFormatter : Formatter {
     public enum ProductComponent {
         case subscriptionDuration

@@ -182,7 +182,7 @@ import Foundation
 }
 
 extension String {
-    public func pluralize(count: Int = 2, with: String = "") -> String {
+    @MainActor public func pluralize(count: Int = 2, with: String = "") -> String {
         let semaphore = DispatchSemaphore(value: 0)
         var result = self
         
